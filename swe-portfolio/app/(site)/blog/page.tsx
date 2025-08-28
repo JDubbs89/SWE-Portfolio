@@ -3,7 +3,7 @@ export default function Home() {
     <section className='py-24'>
       <div className="container">
         <h1 className="text-3xl font-bold">
-          Jonathan Warner - Software Engineer
+          Blog
         </h1>
       </div>
     </section>
