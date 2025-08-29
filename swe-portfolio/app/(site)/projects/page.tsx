@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Projects() {
   return (
     <section className='py-24'>
       <div className="container">

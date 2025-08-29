@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+.home-nav-button {
+  @apply my-auto mr-auto text-3xl cursor-pointer hover:text-[#d0d2ec] font-bold text-[#f9f5ff] transition-all duration-300
+}
+.default-nav-button {
+  @apply mx-0.5 px-3 rounded-3xl cursor-pointer bg-[#0a0a0a] text-[#f9f5ff] transition-all duration-250
+}
+.default-nav-button:hover {
+  @apply text-[#d0d2ec] bg-[#05299e75]
+}
+
+.default-footer-text {
+  @apply mx-8 text-sm text-[#f9f5ff]
+}
