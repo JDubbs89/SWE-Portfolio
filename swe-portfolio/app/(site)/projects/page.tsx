@@ -1,11 +1,11 @@
 export default function Projects() {
   return (
-    <section className='py-24'>
-      <div className="container">
-        <h1 className="text-3xl font-bold">
-          My projects
-        </h1>
+    <div className="content-wrapper">
+      <h1 className="page-title">Projects</h1>
+      <div className="base-section">
+        <h1 className="section-title">Summary</h1>
+        <p className="body-text">Sit down, grab a snack.</p>
       </div>
-    </section>
+    </div>
   )
 }

@@ -3,8 +3,11 @@ import { usePathname } from "next/navigation";
 
 export default function NotFound() {
     const pathname = usePathname();
-    return <div className="container py-24">
-        <h1 className="text-3xl font-bold">404 - This is not the page you're looking for</h1>
-        <p>jonathanwarner.cs{pathname} was not found.</p>
+    return <div className="base-section content-wrapper">
+        <h1 className="section-title">This is not the page you're looking 4(04)</h1>
+        <p className="body-text">jonathanwarner.cs{pathname} was not found.</p>
+        <button className="default-nav-button">
+            Return to Home
+        </button>
     </div>
 }

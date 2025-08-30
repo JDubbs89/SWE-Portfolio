@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/*
 .home-nav-button {
   @apply my-auto mr-auto text-3xl cursor-pointer hover:text-[#d0d2ec] font-bold text-[#f9f5ff] transition-all duration-300
 }
@@ -12,4 +12,299 @@
 
 .default-footer-text {
   @apply mx-8 text-sm text-[#f9f5ff]
+}
+*/
+/* Base Styles */
+* {
+    @apply box-border;
+}
+
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply font-sans m-0 p-0;
+}
+
+/* Navigation Classes */
+.home-nav-button {
+    @apply mr-auto ml-0 text-[clamp(1.25rem,4vw,1.875rem)] cursor-pointer font-bold text-[#f9f5ff] transition-all duration-300;
+}
+.home-nav-button:hover {
+    @apply text-[#8ba3f0];
+}
+
+.default-nav-button {
+    @apply mx-0.5 my-0 px-[clamp(0.5rem,2vw,0.75rem)] py-2 rounded-full cursor-pointer bg-[rgba(10,10,10,0.8)] backdrop-blur text-[#d0d2ec] transition-all duration-300 text-[clamp(0.75rem,2vw,0.875rem)] border border-[rgba(83,134,228,0.1)];
+}
+.default-nav-button:hover {
+    @apply text-[#f9f5ff] bg-[rgba(83,134,228,0.15)] border-[rgba(83,134,228,0.3)];
+}
+
+.nav-bar {
+    @apply w-full mb-5 bg-[rgba(10,10,10,0.85)] backdrop-blur border-b border-[rgba(83,134,228,0.1)] px-[clamp(1rem,4vw,1.5rem)] py-[clamp(0.75rem,2vw,1rem)] flex items-center justify-between sticky top-0 z-50;
+}
+
+.nav-container {
+    @apply max-w-[min(90vw,72rem)] mx-auto flex items-center justify-between w-full;
+}
+
+/* Typography Classes */
+.page-title {
+    @apply text-[clamp(1.75rem,6vw,3rem)] font-bold text-[#f5f5f5] mb-[clamp(1.5rem,4vw,2rem)] leading-tight;
+}
+
+.section-title {
+    @apply text-[clamp(1.5rem,5vw,2.25rem)] font-bold text-[#f5f5f5] mb-[clamp(1rem,3vw,1.5rem)] leading-snug;
+}
+
+.sub-header {
+    @apply text-[clamp(1.125rem,3vw,1.5rem)] font-semibold text-[#d0d0d2] mb-[clamp(0.75rem,2vw,1rem)] leading-relaxed;
+}
+
+.body-text {
+    @apply text-[clamp(0.875rem,2.5vw,1rem)] text-[#e0e0e2] leading-relaxed mb-[clamp(0.75rem,2vw,1rem)];
+}
+
+.small-text {
+    @apply text-[clamp(0.75rem,2vw,0.875rem)] text-[#a8a8b0];
+}
+
+.accent-text {
+    @apply text-[#8ba3f0] font-medium;
+}
+
+/* Card Components */
+.blog-card {
+    @apply bg-gradient-to-br from-[rgba(10,10,10,0.95)] via-[rgba(15,15,20,0.9)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(1rem,3vw,1.5rem)] transition-all duration-300 ease-in-out backdrop-blur;
+}
+.blog-card:hover {
+    @apply border-[rgba(122,155,245,0.5)] shadow-lg -translate-y-1;
+}
+
+.blog-card-title {
+    @apply text-[clamp(1rem,3vw,1.25rem)] font-bold text-[#f9f5ff] mb-2 transition-colors duration-200 leading-snug;
+}
+.blog-card-title:hover {
+    @apply text-[#8ba3f0];
+}
+
+.blog-card-excerpt {
+    @apply text-[#a8a8b0] text-[clamp(0.8rem,2vw,0.875rem)] leading-relaxed mb-3;
+}
+
+.blog-card-meta {
+    @apply text-[clamp(0.7rem,1.8vw,0.75rem)] text-[#6b6b72] flex items-center gap-2 flex-wrap;
+}
+
+.project-card {
+    @apply bg-gradient-to-br from-[rgba(10,10,10,0.95)] via-[rgba(20,25,45,0.85)] to-[rgba(5,41,158,0.08)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(1rem,3vw,1.5rem)] transition-all duration-300 ease-in-out backdrop-blur;
+}
+.project-card:hover {
+    @apply border-[rgba(122,155,245,0.5)] shadow-lg -translate-y-1;
+}
+
+.project-card-title {
+    @apply text-[clamp(1rem,3vw,1.25rem)] font-bold text-[#f9f5ff] mb-[clamp(0.5rem,2vw,0.75rem)] transition-colors duration-200 leading-snug;
+}
+.project-card:hover .project-card-title {
+    @apply text-[#8ba3f0];
+}
+
+.project-card-description {
+    @apply text-[#a8a8b0] text-[clamp(0.8rem,2vw,0.875rem)] leading-relaxed mb-[clamp(0.75rem,2vw,1rem)];
+}
+
+.project-card-tech {
+    @apply inline-block bg-gradient-to-br from-[rgba(20,20,25,0.8)] to-[rgba(83,134,228,0.1)] text-[#9fa3a8] text-[clamp(0.65rem,1.8vw,0.75rem)] px-[clamp(0.4rem,1.5vw,0.5rem)] py-[clamp(0.2rem,1vw,0.25rem)] rounded-full mr-2 mb-2 border border-[rgba(83,134,228,0.15)];
+}
+
+/* Layout Classes */
+.page-container {
+    @apply min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] text-[#f5f5f5];
+}
+
+.content-wrapper {
+    @apply max-w-[min(90vw,72rem)] mx-auto px-[clamp(1rem,4vw,1.5rem)] py-[clamp(1rem,4vw,2rem)];
+}
+
+.section-spacing {
+    @apply mb-[clamp(2rem,6vw,4rem)];
+}
+
+.grid-2 {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-[clamp(1rem,3vw,1.5rem)];
+}
+
+.grid-3 {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))] gap-[clamp(1rem,3vw,1.5rem)];
+}
+
+/* Code and Media Classes */
+.code-block {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.9)] via-[rgba(10,10,10,0.95)] to-[rgba(5,41,158,0.08)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(0.75rem,2vw,1rem)] font-mono text-[clamp(0.8rem,2vw,0.875rem)] text-[#e8e8ea] overflow-x-auto backdrop-blur;
+}
+
+.inline-code {
+    @apply bg-gradient-to-br from-[rgba(20,20,25,0.8)] to-[rgba(83,134,228,0.1)] text-[#9fa3a8] px-2 py-1 rounded-[clamp(0.2rem,1vw,0.65rem)] text-[clamp(0.8rem,2vw,0.875rem)] font-mono border border-[rgba(83,134,228,0.15)];
+}
+
+.code-header {
+    @apply bg-gradient-to-br from-[rgba(20,20,25,0.9)] to-[rgba(83,134,228,0.15)] text-[#e8e8ea] px-[clamp(0.75rem,2vw,1rem)] py-[clamp(0.4rem,1.5vw,0.5rem)] rounded-t-[clamp(0.75rem,2vw,1rem)] text-[clamp(0.8rem,2vw,0.875rem)] font-medium flex items-center justify-between border border-[rgba(83,134,228,0.2)] border-b-0;
+}
+
+.image-container {
+    @apply rounded-[clamp(0.75rem,2vw,1rem)] max-w-full overflow-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300 ease-in-out backdrop-blur;
+}
+.image-container:hover {
+    @apply border-[rgba(122,155,245,0.5)] shadow-lg;
+}
+
+.featured-image {
+    @apply w-full h-auto object-cover;
+}
+
+.image-caption {
+    @apply text-center text-[clamp(0.8rem,2vw,0.875rem)] text-[#6b6b72] mt-2 italic;
+}
+
+.embed-container {
+    @apply bg-gradient-to-br from-[rgba(10,10,10,0.95)] via-[rgba(15,15,20,0.9)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(0.75rem,2vw,1rem)] my-[clamp(1rem,3vw,1.5rem)] backdrop-blur;
+}
+
+/* Interactive Elements */
+.primary-button {
+    @apply bg-gradient-to-br from-[#7a9bf5] to-[#5386e4] text-white font-semibold px-[clamp(1rem,3vw,1.5rem)] py-[clamp(0.6rem,2vw,0.75rem)] rounded-[clamp(0.4rem,1vw,0.5rem)] transition-all duration-300 ease-in-out cursor-pointer border-0 text-[clamp(0.8rem,2vw,0.875rem)] shadow-md;
+}
+.primary-button:hover {
+    @apply bg-gradient-to-br from-[#6b8df2] to-[#4a7ce6] shadow-lg -translate-y-0.5;
+}
+
+.secondary-button {
+    @apply border border-[rgba(122,155,245,0.6)] text-[#8ba3f0] bg-[rgba(122,155,245,0.05)] font-semibold px-[clamp(1rem,3vw,1.5rem)] py-[clamp(0.6rem,2vw,0.75rem)] rounded-[clamp(0.4rem,1vw,0.5rem)] transition-all duration-300 ease-in-out cursor-pointer text-[clamp(0.8rem,2vw,0.875rem)] backdrop-blur;
+}
+.secondary-button:hover {
+    @apply bg-[rgba(122,155,245,0.15)] text-[#f9f5ff] border-[rgba(122,155,245,0.8)];
+}
+
+.ghost-button {
+    @apply text-[#8ba3f0] px-[clamp(0.75rem,2vw,1rem)] py-[clamp(0.4rem,1.5vw,0.5rem)] rounded-[clamp(0.4rem,1vw,0.5rem)] transition-all duration-300 ease-in-out cursor-pointer bg-transparent border-0 text-[clamp(0.8rem,2vw,0.875rem)];
+}
+.ghost-button:hover {
+    @apply text-[#f9f5ff] bg-[rgba(122,155,245,0.1)];
+}
+
+.link-accent {
+    @apply text-[#8ba3f0] underline underline-offset-2 transition-all duration-200 ease-in-out decoration-[rgba(122,155,245,0.4)];
+}
+.link-accent:hover {
+    @apply text-[#b8c5f2] no-underline;
+}
+
+.link-subtle {
+    @apply text-[#b8c5f2] transition-colors duration-200 ease-in-out;
+}
+.link-subtle:hover {
+    @apply text-[#8ba3f0];
+}
+
+/* Form Elements */
+.form-input {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.9)] via-[rgba(10,10,10,0.95)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] px-[clamp(0.75rem,2vw,1rem)] py-[clamp(0.6rem,2vw,0.75rem)] text-[#e8e8ea] transition-all duration-300 ease-in-out w-full text-[clamp(0.8rem,2vw,0.875rem)] backdrop-blur;
+}
+.form-input::placeholder {
+    @apply text-[#6b6b72];
+}
+.form-input:focus {
+    @apply border-[rgba(122,155,245,0.5)] outline-none shadow-lg;
+}
+
+.form-textarea {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.9)] via-[rgba(10,10,10,0.95)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] px-[clamp(0.75rem,2vw,1rem)] py-[clamp(0.6rem,2vw,0.75rem)] text-[#e8e8ea] resize-y min-h-[clamp(6rem,15vw,8rem)] transition-all duration-300 ease-in-out w-full text-[clamp(0.8rem,2vw,0.875rem)] backdrop-blur;
+}
+.form-textarea::placeholder {
+    @apply text-[#6b6b72];
+}
+.form-textarea:focus {
+    @apply border-[rgba(122,155,245,0.5)] outline-none shadow-lg;
+}
+
+.form-label {
+    @apply text-[#a8a8b0] font-medium mb-[clamp(0.4rem,1vw,0.5rem)] block text-[clamp(0.8rem,2vw,0.875rem)];
+}
+
+/* Status and Feedback */
+.tag {
+    @apply inline-block bg-gradient-to-br from-[rgba(20,20,25,0.8)] to-[rgba(107,107,114,0.2)] text-[#9fa3a8] text-[clamp(0.65rem,1.8vw,0.75rem)] px-[clamp(0.4rem,1.5vw,0.5rem)] py-[clamp(0.2rem,1vw,0.25rem)] rounded-full border border-[rgba(107,107,114,0.3)];
+}
+
+.tag-primary {
+    @apply inline-block bg-gradient-to-br from-[rgba(20,20,25,0.8)] to-[rgba(83,134,228,0.15)] text-[#9fa3a8] text-[clamp(0.65rem,1.8vw,0.75rem)] px-[clamp(0.4rem,1.5vw,0.5rem)] py-[clamp(0.2rem,1vw,0.25rem)] rounded-full border border-[rgba(83,134,228,0.2)];
+}
+
+.tag-accent {
+    @apply inline-block bg-gradient-to-br from-[rgba(20,20,25,0.8)] to-[rgba(83,134,228,0.1)] text-[#9fa3a8] text-[clamp(0.65rem,1.8vw,0.75rem)] px-[clamp(0.4rem,1.5vw,0.5rem)] py-[clamp(0.2rem,1vw,0.25rem)] rounded-full border border-[rgba(83,134,228,0.15)];
+}
+
+.alert {
+    @apply border border-[rgba(83,134,228,0.2)] bg-gradient-to-br from-[rgba(15,15,20,0.9)] via-[rgba(10,10,10,0.95)] to-[rgba(5,41,158,0.08)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(0.75rem,2vw,1rem)] mb-[clamp(0.75rem,2vw,1rem)] backdrop-blur;
+}
+
+.alert-text {
+    @apply text-[#e8e8ea] text-[clamp(0.8rem,2vw,0.875rem)];
+}
+
+/* Footer */
+.default-footer-text {
+    @apply mx-[clamp(1rem,4vw,2rem)] text-[clamp(0.8rem,2vw,0.875rem)] text-[#d0d0d2];
+}
+
+.footer-container {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.8)] to-[rgba(10,10,10,0.9)] border-t border-[rgba(83,134,228,0.2)] px-[clamp(1rem,4vw,1.5rem)] py-[clamp(1.5rem,4vw,2rem)] mt-[clamp(3rem,6vw,4rem)] backdrop-blur;
+}
+
+.footer-content {
+    @apply max-w-[min(90vw,72rem)] mx-auto text-center;
+}
+
+/* Utility Classes */
+.divider {
+    @apply border-t border-[rgba(83,134,228,0.2)] my-[clamp(1.5rem,4vw,2rem)];
+}
+
+.highlight {
+    @apply bg-gradient-to-br from-[rgba(20,20,25,0.6)] to-[rgba(83,134,228,0.15)] text-[#9fa3a8] px-[clamp(0.2rem,1vw,0.25rem)] rounded-[clamp(0.2rem,1vw,0.25rem)] border border-[rgba(83,134,228,0.2)];
+}
+
+.muted {
+    @apply text-[#6b6b72];
+}
+
+/* Demo specific styles */
+.base-section {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(1rem,3vw,1.5rem)] mb-[clamp(1.5rem,4vw,2rem)] backdrop-blur;
+}
+
+.base-grid {
+    @apply grid gap-[clamp(0.75rem,2vw,1rem)] mt-[clamp(0.75rem,2vw,1rem)];
+}
+
+.base-item {
+    @apply flex items-center gap-[clamp(0.4rem,1.5vw,0.5rem)] flex-wrap;
+}
+
+/* Enhanced responsive utilities */
+@media (max-width: 480px) {
+    .content-wrapper {
+        @apply px-4;
+    }
+    
+    .base-section {
+        @apply p-4;
+    }
+    
+    .nav-bar {
+        @apply px-4;
+    }
 }

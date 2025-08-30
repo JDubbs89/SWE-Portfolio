@@ -26,13 +26,17 @@ export default function SiteLayout({
     
     <html lang="en">
       
-      <body className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-6xl antialiased font-sans bg-[#0a0a0a] text-[#f9f5ff]`}>
+      <body  className="page-container">
         
-        <header className="py-2 px-4 my-4 flex content-end rounded-3xl bg-[#0a0a0a]">
+        <header className="nav-bar">
+          <div className="nav-container">
           <button className="home-nav-button">
             Jonathan Warner
           </button>
           <nav className="flex content-between ml-auto">
+            <button className="default-nav-button">
+              Home
+            </button>
             <button className="default-nav-button">
               About
             </button>
@@ -40,18 +44,23 @@ export default function SiteLayout({
               Projects
             </button>
             <button className="default-nav-button">
+              Blog
+            </button>
+            <button className="default-nav-button">
               Contact
             </button>
           </nav>
+          </div>
         </header>
 
           {children}
         
-        <footer className="py-4 mt-8 border-t border-[#05299e75] text-sm text-[#f9f5ff]">
+        <footer className="footer-container">
+          <div className="footer-content">
           <p className="default-footer-text">
-            Footer
+            @2025 Jonathan Warner, Software Engineer. All rights reserved.
           </p>
-          
+          </div>
         </footer>
       
       </body>
