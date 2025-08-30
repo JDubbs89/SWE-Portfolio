@@ -1,6 +1,5 @@
 export const metadata = {
-  title: "About | Jonathan Warner - Software Engineer",
-  description: "Hello! I'm Jonathan, a computer science student and aspiring software engineer.",
+  title: "About",
 }
 
 export default function About() {

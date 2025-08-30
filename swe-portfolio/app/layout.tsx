@@ -13,7 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jonathan Warner- Software Engineering Portfolio",
+  title: {
+    default: "Jonathan Warner - Software Engineering Portfolio",
+    template: "%s | Jonathan Warner, Software Engineering Portfolio",
+    absolute: "",
+  },
   description: "Hello! I'm Jonathan, a computer science student and aspiring software engineer.",
 };
 

@@ -1,20 +1,25 @@
-export default function BlogCard(/*title:string, description:string, date:string, read_time:string, topic:string*/){
-    const title = "Hello World"
-    const description = "Hello World"
-    const date = "Hello World"
-    const read_time = "Hello World"
-    const topic = "Hello World"
+interface BlogCardProps {
+  title: string;
+  description: string;
+  date: string;
+  read_time: string;
+  topic: string;
+}
+
+export default function BlogCard(
+    { props }: { props: BlogCardProps }, 
+){
     
     return (
         <div className="blog-card">
-            <div className="blog-card-title">{title}</div>
-            <div className="blog-card-excerpt">{description}</div>
+            <div className="blog-card-title">{props.title}</div>
+            <div className="blog-card-excerpt">{props.description}</div>
             <div className="blog-card-meta">
-                <span>{date}</span>
+                <span>{props.date}</span>
                 <span>•</span>
-                <span>{read_time} read</span>
+                <span>{props.read_time} read</span>
                 <span>•</span>
-                <span>{topic}</span>
+                <span>{props.topic}</span>
             </div>
         </div>
     )

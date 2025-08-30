@@ -1,7 +1,6 @@
 import BlogCard from './blogCard';
 export const metadata = {
-  title: "Blog | Jonathan Warner - Software Engineer",
-  description: "Hello! I'm Jonathan, a computer science student and aspiring software engineer.",
+  title: "Blog",
 }
 
 export default function Blog() {
@@ -11,28 +10,24 @@ export default function Blog() {
       <div className="base-section">
         <h1 className="section-title">Recent Posts</h1>
         <div className="grid-2 mb-2">
-          <div className="blog-card">
-            <div className="blog-card-title">Understanding the WAS API</div>
-            <div className="blog-card-excerpt">A comprehensive guide to understanding and implementing React Hooks in your applications. Learn about useState, useEffect, and custom hooks.</div>
-            <div className="blog-card-meta">
-                <span>March 15, 2024</span>
-                <span>•</span>
-                <span>8 min read</span>
-                <span>•</span>
-                <span>Windows Audio System</span>
-            </div>
-          </div>
-          <div className="blog-card">
-            <div className="blog-card-title">Homegrown Chatbots with Markov Chains</div>
-            <div className="blog-card-excerpt">A comprehensive guide to understanding and implementing React Hooks in your applications. Learn about useState, useEffect, and custom hooks.</div>
-            <div className="blog-card-meta">
-                <span>March 15, 2024</span>
-                <span>•</span>
-                <span>5 min read</span>
-                <span>•</span>
-                <span>AI</span>
-            </div>
-          </div>
+          <BlogCard 
+            props={{ title: "Understanding the Windows Audio System API", 
+            description: "Discussing how windows manages its audio routing.", 
+            date: "March 15, 2025", 
+            read_time: "8 min", 
+            topic: "Windows Audio System"}} />
+          <BlogCard 
+            props={{ title: "Homegrown Chatbots with Markov Chains", 
+            description: "How can we make our own chatbots at home?", 
+            date: "March 18, 2025", 
+            read_time: "5 min", 
+            topic: "Artificial Intelligence"}} />
+          <BlogCard 
+            props={{ title: "Using Cloud Compute to Run Game Servers", 
+            description: "How can we use Oracle Cloud's always-free tier to run our own Minecraft server?", 
+            date: "March 25, 2025", 
+            read_time: "10 min", 
+            topic: "Custom Game Servers"}} />
         </div>
       </div>
     </div>
