@@ -1,6 +1,9 @@
+import Link from "next/link";
+import NavButton from "./_components/buttons/navButton";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import HomeNavButton from "./_components/buttons/homeNavButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +29,13 @@ export default function SiteLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navLinks = [
+    {name: "Home", href: "/home"},
+    {name: "About", href: "/about"},
+    {name: "Projects", href: "/projects"},
+    {name: "Blog", href: "/blog"},
+    {name: "Contact", href: "/contact"}
+  ]
   return (
     
     <html lang="en">
@@ -34,25 +44,16 @@ export default function SiteLayout({
         
         <header className="nav-bar">
           <div className="nav-container">
-          <button className="home-nav-button">
-            Jonathan Warner
-          </button>
+          <HomeNavButton props={{name: "Jonathan Warner", href: "/home"}}/>
           <nav className="flex content-between ml-auto">
-            <button className="default-nav-button">
-              Home
-            </button>
-            <button className="default-nav-button">
-              About
-            </button>
-            <button className="default-nav-button">
-              Projects
-            </button>
-            <button className="default-nav-button">
-              Blog
-            </button>
-            <button className="default-nav-button">
-              Contact
-            </button>
+            {navLinks.map((link) => {
+              return (
+                <NavButton key={link.name} props={{name: link.name, href: link.href}}/>
+                /*<Link href={link.href} key={link.name} className="default-nav-button">
+                  {link.name}
+                </Link>*/
+              );
+            })}
           </nav>
           </div>
         </header>

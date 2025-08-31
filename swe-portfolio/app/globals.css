@@ -80,7 +80,7 @@ body {
     @apply bg-gradient-to-br from-[rgba(10,10,10,0.95)] via-[rgba(15,15,20,0.9)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(1rem,3vw,1.5rem)] transition-all duration-300 ease-in-out backdrop-blur;
 }
 .blog-card:hover {
-    @apply border-[rgba(122,155,245,0.5)] shadow-lg -translate-y-1;
+    @apply border-[rgba(122,155,245,0.5)] shadow-lg -translate-y-1 cursor-pointer;
 }
 
 .blog-card-title {
@@ -155,18 +155,18 @@ body {
 }
 
 .image-container {
-    @apply rounded-[clamp(0.75rem,2vw,1rem)] max-w-full overflow-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300 ease-in-out backdrop-blur;
+    @apply rounded-[clamp(0.75rem,2vw,1rem)] max-w-fit overflow-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300 ease-in-out backdrop-blur;
 }
 .image-container:hover {
     @apply border-[rgba(122,155,245,0.5)] shadow-lg;
 }
 
 .featured-image {
-    @apply w-full h-auto object-cover;
+    @apply w-full h-auto object-scale-down;
 }
 
 .image-caption {
-    @apply text-center text-[clamp(0.8rem,2vw,0.875rem)] text-[#6b6b72] mt-2 italic;
+    @apply text-center mb-0.5 text-[clamp(0.8rem,2vw,0.875rem)] text-[#6b6b72] mt-2 italic;
 }
 
 .embed-container {

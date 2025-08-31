@@ -4,12 +4,13 @@ interface BlogCardProps {
   date: string;
   read_time: string;
   topic: string;
+  blogid: string;
 }
 
 export default function BlogCard(
     { props }: { props: BlogCardProps }, 
 ){
-    
+    const cardURL = `/blog/${props.blogid}`
     return (
         <div className="blog-card">
             <div className="blog-card-title">{props.title}</div>
