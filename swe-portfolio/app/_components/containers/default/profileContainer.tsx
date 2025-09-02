@@ -13,18 +13,20 @@ export default function ProfileContainer(
 ){
     // Desktop Layout First
       return(
-        <div className="relative w-full h-auto">
-        <div className={`dt-profile-container fade-container ${!isMobile ? "opacity-100" : "opacity-0 pointer-events-none h-0"}`}>
+        <div className="relative w-min h-auto">
+        <div className={`dt-profile-container fade-container  backdrop-blur rounded-full overflow-clip
+          ${collapsed ? "mr-0" : "mr-12"} 
+          ${!isMobile ? "opacity-100" : "opacity-0 pointer-events-none h-0"}`}>
 
             <ImageContainer props={{
             className: `profile-image rounded-full border-2 border-gray-100 shadow-sm dt ${collapsed ? "w-16 h-16" : "w-32 h-32"}`, 
             caption: `${name}`, imageURL: "/assets/Headshot.jpg", width: 400, height: 400, use_caption: false}}/>
 
           <div className="dt-profile-info">
-            <p className="profile-name dt">{name}</p>
-            <div className={`dt ${collapsed ? "max-h-0 opacity-0" : "max-h-40 opacity-100"}`}>
-              <p className="profile-job-title">{jobTitle}</p>
-              <p className="profile-bio">{description}</p>
+            <p className="profile-name whitespace-nowrap mr-6 dt">{name}</p>
+            <div className={`dt ${collapsed ? "opacity-0 -translate-x-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0" : "max-h-40 opacity-100 mr-6 mb-2"}`}>
+              <p className="profile-job-title duration-100">{jobTitle}</p>
+              <p className="profile-bio duration-75">{description}</p>
             </div>
           </div>
         </div>
@@ -34,14 +36,12 @@ export default function ProfileContainer(
               className: `profile-image rounded-full border-2 border-gray-100 shadow-sm dt ${collapsed ? "w-12 h-12" : "w-24 h-24"}`, 
               caption: `${name}`, imageURL: "/assets/Headshot.jpg", width: 400, height: 400, use_caption: false}}/>
 
-            <div className={`m-profile-info dt ${collapsed ? "flex-row items-center gap-2" : "flex-col gap-2"}`}>
+            <div className={`m-profile-info my-auto dt ${collapsed ? "flex-row items-start" : "flex-col"}`}>
               <p className="profile-name dt">{name}</p>
-              {!collapsed && (
-                <div className="dt">
-                  <p className="profile-job-title">{jobTitle}</p>
-                  <p className="profile-bio">{description}</p>
-                </div>
-              )}
+              <div className={`dt ${collapsed ? "max-h-0 opacity-0" : "max-h-40 opacity-100"}`}>
+                <p className="profile-job-title">{jobTitle}</p>
+                <p className="profile-bio">{description}</p>
+              </div>
             </div>
         </div>
         </div>

@@ -54,7 +54,7 @@ export default function SiteHeader(){
                     <ProfileContainer collapsed={collapsed} isMobile={isMobile} name={name} jobTitle={jobTitle} description={description}/>
                     
                     {/*Fade out on mobile/thin display width */}
-                    <nav className={`absolute md:relative top-0 right-0 flex dt
+                    <nav className={`nav-button-container absolute md:relative top-0 right-0 flex dt gap-1
                         ${isMobile ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
                         {navLinks.map((link) => (
                             <NavButton key={link.name} props={{ name: link.name, href: link.href, extra_styles: "" }} />
@@ -69,7 +69,7 @@ export default function SiteHeader(){
 
                     {/*Fade in on mobile/thin display width */}
                     <button 
-                    className={`hamburger-button ${isMobile ? "flex opacity-100" : "opacity-0"}`} 
+                    className={`hamburger-button ${isMobile ? "flex opacity-100" : "absolute opacity-0 w-0"}`} 
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                         <span className="hamburger"></span>
                         <span className="hamburger"></span>
