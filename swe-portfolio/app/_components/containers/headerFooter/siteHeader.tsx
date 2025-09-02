@@ -1,5 +1,6 @@
 "use client"
 import NavButton from "../../buttons/navButton";
+import HamburgerButton from "../../buttons/hamburgerButton";
 import ProfileContainer from "../../containers/default/profileContainer";
 import SideNavContainer from "../default/sideNavContainer";
 import { usePathname } from "next/navigation";
@@ -35,7 +36,7 @@ export default function SiteHeader(){
         const onScroll = () => {
             if (window.scrollY < 45 && collapsed) {
                 setCollapsed(false); // only expand when truly at the top
-            } else if (!collapsed && window.scrollY > 120) {
+            } else if (!collapsed && window.scrollY > (isMobile ? 60 : 120)) {
                 setCollapsed(true); // collapse once scrolling starts
             }
         };
@@ -46,12 +47,19 @@ export default function SiteHeader(){
 
     const name = "Jonathan Warner";
     const jobTitle = "Software Engineer";
-    const description = "Passionate about building multiplayer games and scalable apps";
+    const description = "Building software to make people's lives better";
 
     return (
             <header className="nav-bar">
                 <div className="nav-container dt">
-                    <ProfileContainer collapsed={collapsed} isMobile={isMobile} name={name} jobTitle={jobTitle} description={description}/>
+                    <ProfileContainer 
+                        collapsed={collapsed} 
+                        isMobile={isMobile} 
+                        name={name} 
+                        jobTitle={jobTitle} 
+                        description={description} 
+                        hamburger_button={
+                            <HamburgerButton isMobile={isMobile} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={() => setMobileMenuOpen(!mobileMenuOpen)}/>}/>
                     
                     {/*Fade out on mobile/thin display width */}
                     <nav className={`nav-button-container absolute md:relative top-0 right-0 flex dt gap-1
@@ -66,16 +74,6 @@ export default function SiteHeader(){
                         ${mounted && mobileMenuOpen ? "opacity-30" : "opacity-0 pointer-events-none"}`}>
                     </div>
                     <SideNavContainer collapsed={!mobileMenuOpen} onMouseLeave={() => setMobileMenuOpen(!mobileMenuOpen)}/>
-
-                    {/*Fade in on mobile/thin display width */}
-                    <button 
-                    className={`hamburger-button ${isMobile ? "flex opacity-100" : "absolute opacity-0 w-0"}`} 
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                        <span className="hamburger"></span>
-                        <span className="hamburger"></span>
-                        <span className="hamburger"></span>
-                    </button>
-                
                 </div>
             </header>
     )

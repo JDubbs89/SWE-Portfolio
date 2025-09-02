@@ -30,7 +30,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .default-nav-button {
-    @apply mx-0 my-0 px-[clamp(0.5rem,2vw,0.75rem)] py-2 rounded-full cursor-pointer bg-[rgba(10,10,10,0.8)] backdrop-blur text-[#d0d2ec] transition-all duration-300 text-[clamp(0.75rem,2vw,0.875rem)] border  border-[rgba(83,134,228,0)];
+    @apply mx-0 my-0 px-[clamp(0.5rem,2vw,0.75rem)] py-2 rounded-full cursor-pointer bg-[rgba(10,10,10,0)] text-[#d0d2ec] transition-all duration-300 text-[clamp(0.75rem,2vw,0.875rem)] border  border-[rgba(83,134,228,0)];
 }
 .default-nav-button:hover {
     @apply text-[#f9f5ff] bg-[rgba(83,134,228,0.15)];
@@ -48,7 +48,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .nav-button-container{
-    @apply border-[rgba(83,134,228,0.1)] bg-[rgba(10,10,10,0.8)] backdrop-blur border rounded-full transition-all duration-300 ease-in-out;
+    @apply border-[rgba(83,134,228,0.2)] bg-[rgba(10,10,10,0.8)] backdrop-blur border rounded-full transition-all duration-300 ease-in-out;
 }
 
 .nav-container {
@@ -327,7 +327,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dt-profile-container{
-    @apply flex bg-[rgba(10,10,10,0.85)] bg-linear-0  border-[rgba(83,134,228,0.2)] border w-min;
+    @apply flex bg-[rgba(10,10,10,0.85)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b w-min;
 }
 
 .dt-profile-info{
@@ -335,7 +335,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .m-profile-container{
-    @apply flex;
+    @apply flex flex-col w-min;
 }
 
 .m-profile-info{
@@ -343,7 +343,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .profile-image {
-  @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 border-gray-100 shadow-sm transition-all duration-300 flex-shrink-0;
+  @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 text-[#8ba3f0] shadow-sm transition-all duration-300 flex-shrink-0;
 }
 
 .fade-container {
@@ -367,10 +367,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hamburger-button{
-    @apply cursor-pointer transition-all duration-100 flex-col w-6 h-6 justify-center items-center gap-1 border-[rgba(83,134,228,0.3)] rounded-xs;
+    @apply cursor-pointer transition-all duration-100 flex-col w-6 h-6 justify-center items-center gap-1 border-[rgba(83,134,228,0.3)];
 }
 .hamburger-button:hover{
-    @apply bg-[rgba(83,134,228,0.4)] overflow-visible;
+    @apply bg-[rgba(83,134,228,0.15)] rounded-full p-4 m-0;
 }
 
 @keyframes fadeIn {

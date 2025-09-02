@@ -14,7 +14,7 @@ export default function ContentContainter(
       <div className="base-section">
         {/*<ProfileContainer/>*/}
         <h1 className="section-title">{header}</h1>
-        <p className="body-text">{content}</p>
+        <p className="body-text whitespace-normal">{content}</p>
       </div>
     </div>
   )
