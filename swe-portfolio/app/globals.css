@@ -327,7 +327,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dt-profile-container{
-    @apply flex bg-[rgba(10,10,10,0.85)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b w-min;
+    @apply flex bg-[rgba(10,10,10,0.4)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b w-min;
 }
 
 .dt-profile-info{
