@@ -1,15 +1,11 @@
+import ContentContainer from '../../_components/containers/default/contentContainer';
+
 export const metadata = {
   title: "About",
 }
 
 export default function About() {
   return (
-    <section className='py-24'>
-      <div className="container">
-        <h1 className="text-3xl font-bold">
-          Hi, I'm Jonathan.
-        </h1>
-      </div>
-    </section>
+    <ContentContainer title="About" header="Hi, I'm Jonathan" content="I'm a computer science student at Trine University in Angola, Indiana."/>
   )
 }

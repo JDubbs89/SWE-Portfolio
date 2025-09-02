@@ -2,6 +2,7 @@
 import NavButton from "../../buttons/navButton";
 import ProfileContainer from "../../containers/default/profileContainer";
 import SideNavContainer from "../default/sideNavContainer";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 
@@ -13,10 +14,14 @@ export default function SiteHeader(){
         {name: "Blog", href: "/blog"},
         {name: "Contact", href: "/contact"}
     ]
+    const pathname = usePathname();
     const [collapsed, setCollapsed] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMobileMenuOpen(false);
+    }, [pathname]);
     useEffect(() => setMounted(true), []);
     // Detect mobile width
     useEffect(() => {
@@ -52,7 +57,7 @@ export default function SiteHeader(){
                     <nav className={`absolute md:relative top-0 right-0 flex dt
                         ${isMobile ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
                         {navLinks.map((link) => (
-                            <NavButton key={link.name} props={{ name: link.name, href: link.href }} />
+                            <NavButton key={link.name} props={{ name: link.name, href: link.href, extra_styles: "" }} />
                         ))}
                     </nav>
                     

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "./_components/containers/headerFooter/siteHeader";
 import SiteFooter from "./_components/containers/headerFooter/siteFooter";
+import FadeContainer from "./_components/containers/default/fadeContainer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,6 @@ export default function SiteLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     
     <html lang="en">
@@ -36,11 +36,11 @@ export default function SiteLayout({
       <body  className="page-container overflow-x-hidden">
         
         <SiteHeader/>
-          <div className="flex-1">
-            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 bg-[radial-gradient(circle_at_center,rgba(120,145,255,0.1),transparent_70%)]"></div>
-          
-            {children}
-          </div>
+        <span className="h-36"></span>
+        <div className="flex-1">
+          <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 bg-[radial-gradient(circle_at_center,rgba(120,145,255,0.1),transparent_70%)]"></div>
+          <FadeContainer children={children}/>
+        </div>
         <SiteFooter/>
       
       </body>
