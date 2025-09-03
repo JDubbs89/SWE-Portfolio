@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteHeader from "./_components/containers/headerFooter/siteHeader";
 import SiteFooter from "./_components/containers/headerFooter/siteFooter";
 import FadeContainer from "./_components/containers/default/fadeContainer";
+import ScrollBar from "./_components/interact/scrollbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ export default function SiteLayout({
     <html lang="en">
       
       <body  className="page-container overflow-x-hidden">
-        
+        <ScrollBar/>
         <SiteHeader/>
         <span className="h-36"></span>
         <div className="flex-1">
