@@ -25,7 +25,7 @@ export default function ProfileContainer(
 
           <div className="dt-profile-info">
             <p className="profile-name whitespace-nowrap mr-6 dt">{name}</p>
-            <div className={`dt ${collapsed ? "opacity-0 -translate-x-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0" : "max-h-40 opacity-100 mr-6 mb-2"}`}>
+            <div className={`dt overflow-x-clip ${collapsed ? "opacity-0 -translate-x-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0" : "max-h-40 opacity-100"}`}>
               <p className="profile-job-title duration-100">{jobTitle}</p>
               <p className="profile-bio duration-75">{description}</p>
             </div>
