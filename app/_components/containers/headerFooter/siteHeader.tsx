@@ -76,7 +76,7 @@ export default function SiteHeader(){
                     className={`absolute h-screen w-screen top-0 left-0 transition-all duration-300 bg-black 
                         ${mounted && mobileMenuOpen ? "opacity-30" : "opacity-0 pointer-events-none"}`}>
                     </div>
-                    <SideNavContainer collapsed={!mobileMenuOpen} onMouseLeave={() => {handleMoblieMenuToggle(); return {};}}/>
+                    <SideNavContainer collapsed={!mobileMenuOpen} onMouseLeave={() => {handleMoblieMenuToggle}}/>
                 </div>
             </header>
     )

@@ -2,7 +2,7 @@ import { usePathname } from "next/navigation";
 import NavButton from "../../buttons/navButton";
 type SideNavContainerProps = {
   collapsed: boolean;
-  onMouseLeave: () => {};
+  onMouseLeave: () => void;
 };
 
 export default function SideNavContainer(
