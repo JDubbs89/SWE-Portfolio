@@ -10,10 +10,9 @@ export default function ContentContainter(
 ){
   return (
     <div className="content-wrapper">
-      <h1 className="page-title">{title}</h1>
+      {(title == "" ? <h1 className="page-title">{title}</h1> : <div className="collapsed"></div>)}
       <div className="base-section">
-        {/*<ProfileContainer/>*/}
-        <h1 className="section-title">{header}</h1>
+        {(header == "" ? <h1 className="section-title">{header}</h1> : <div className="collapsed"></div>)}
         <p className="body-text whitespace-normal">{content}</p>
       </div>
     </div>
