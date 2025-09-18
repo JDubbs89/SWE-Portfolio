@@ -2,7 +2,7 @@
 type HamburgerButtonProps = {
   isMobile: boolean;
   mobileMenuOpen: boolean;
-  setMobileMenuOpen: Function;
+  setMobileMenuOpen: (isMenuOpen: boolean) => {};
 };
 
 export default function HamburgerButton(

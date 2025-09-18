@@ -1,3 +1,4 @@
+import Link from "next/link";
 interface BlogCardProps {
   title: string;
   description: string;
@@ -12,7 +13,7 @@ export default function BlogCard(
 ){
     const cardURL = `/blog/${props.blogid}`
     return (
-        <div className="blog-card">
+        <Link className="blog-card cursor-pointer" href={cardURL}>
             <div className="blog-card-title">{props.title}</div>
             <div className="blog-card-excerpt">{props.description}</div>
             <div className="blog-card-meta">
@@ -22,6 +23,6 @@ export default function BlogCard(
                 <span>•</span>
                 <span>{props.topic}</span>
             </div>
-        </div>
+        </Link>
     )
 }
