@@ -23,6 +23,9 @@ export default function SiteHeader(){
     useEffect(() => {
         setMobileMenuOpen(false);
     }, [pathname]);
+    const handleMoblieMenuToggle = ()=>{
+        setMobileMenuOpen(!mobileMenuOpen);
+    }
     useEffect(() => setMounted(true), []);
     // Detect mobile width
     useEffect(() => {
@@ -59,7 +62,7 @@ export default function SiteHeader(){
                         jobTitle={jobTitle} 
                         description={description} 
                         hamburger_button={
-                            <HamburgerButton isMobile={isMobile} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={() => {setMobileMenuOpen(!mobileMenuOpen); return{};}}/>}/>
+                            <HamburgerButton isMobile={isMobile} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={() => {handleMoblieMenuToggle(); return{};}}/>}/>
                     
                     {/*Fade out on mobile/thin display width */}
                     <nav className={`nav-button-container absolute md:relative top-0 right-0 flex dt gap-1
@@ -73,7 +76,7 @@ export default function SiteHeader(){
                     className={`absolute h-screen w-screen top-0 left-0 transition-all duration-300 bg-black 
                         ${mounted && mobileMenuOpen ? "opacity-30" : "opacity-0 pointer-events-none"}`}>
                     </div>
-                    <SideNavContainer collapsed={!mobileMenuOpen} onMouseLeave={() => {setMobileMenuOpen(!mobileMenuOpen); return{};}}/>
+                    <SideNavContainer collapsed={!mobileMenuOpen} onMouseLeave={() => {handleMoblieMenuToggle(); return {};}}/>
                 </div>
             </header>
     )
