@@ -131,7 +131,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .content-wrapper {
-    @apply  max-w-[min(90vw,72rem)] mx-auto px-[clamp(1rem,4vw,1.5rem)] py-[clamp(1rem,4vw,2rem)];
+    @apply  max-w-[min(90vw,72rem)] mx-auto px-[clamp(1rem,4vw,1.5rem)] py-[clamp(1rem,2vw,2rem)];
 }
 
 .section-spacing {
@@ -288,7 +288,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 /* Demo specific styles */
 .base-section {
-    @apply bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(1rem,3vw,1.5rem)] mb-[clamp(1.5rem,4vw,2rem)] backdrop-blur;
+    @apply p-[clamp(1rem,3vw,1.5rem)] my-[clamp(1.5rem,0.5vh,2rem)] backdrop-blur;
+}
+
+.base-section-style {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)]
 }
 
 .base-grid {

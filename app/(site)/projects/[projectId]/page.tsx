@@ -1,4 +1,5 @@
-
+import ContentContainer from "@/app/_components/containers/default/contentContainer";
+import BaseSection from "@/app/_components/sections/baseSection";
 export const runtime = 'edge';
 
 export default async function ProjectDetails({
@@ -8,12 +9,8 @@ export default async function ProjectDetails({
 }) {
   const projectId = (await params).projectId;
   return (
-    <section className='py-24'>
-      <div className="container">
-        <h1 className="text-3xl font-bold">
-          Project {projectId} Post Page
-        </h1>
-      </div>
-    </section>
+    <BaseSection className='py-24'>
+      <ContentContainer title={`${projectId}`} header="Description" content={`My ${projectId} project.`}/>
+    </BaseSection>
   )
 }

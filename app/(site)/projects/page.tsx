@@ -1,15 +1,14 @@
+import BaseSection from "@/app/_components/sections/baseSection";
+import ContentContainer from "@/app/_components/containers/default/contentContainer";
+
 export const metadata = {
   title: "Projects",
 }
 
 export default function Projects() {
   return (
-    <div className="content-wrapper">
-      <h1 className="page-title">Projects</h1>
-      <div className="base-section">
-        <h1 className="section-title">Summary</h1>
-        <p className="body-text">Sit down, grab a snack.</p>
-      </div>
-    </div>
+    <BaseSection className='py-24'>
+          <ContentContainer title="Projects" header="" content={`My projects`}/>
+    </BaseSection>
   )
 }
