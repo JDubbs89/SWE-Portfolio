@@ -62,7 +62,7 @@ export default function SiteHeader(){
                         jobTitle={jobTitle} 
                         description={description} 
                         hamburger_button={
-                            <HamburgerButton isMobile={isMobile} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={() => {handleMoblieMenuToggle(); return {};}}/>}/>
+                            <HamburgerButton isMobile={isMobile} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={handleMoblieMenuToggle}/>}/>
                     
                     {/*Fade out on mobile/thin display width */}
                     <nav className={`nav-button-container absolute md:relative top-0 right-0 flex dt gap-1
