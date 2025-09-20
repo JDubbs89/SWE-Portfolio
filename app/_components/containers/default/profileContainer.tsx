@@ -35,10 +35,14 @@ export default function ProfileContainer(
         <div className={`m-profile-container fade-container dt`}>
           <div className="flex flex-row justify-evenly">
             <div className="flex flex-row mr-auto bg-[rgba(10,10,10,0.85)] bg-linear-0  border-[rgba(83,134,228,0.2)] border rounded-full">
-            <ImageContainer props={{
+              <ImageContainer props={{
               className: `profile-image rounded-full border-2 border-blue-400 shadow-sm dt ${collapsed ? "w-12 h-12" : "w-18 h-18"}`, 
               caption: `${name}`, imageURL: "/assets/Headshot.jpg", width: 400, height: 400, use_caption: false}}/>
-            <p className="profile-name my-auto ml-2 mr-4 dt">{name}</p>
+            
+              <div className="dt flex flex-col justify-start">
+                <p className={`profile-name mt-auto ml-2 mr-4 dt ${collapsed ? "mb-auto" : "mb-0"}`}>{name}</p>
+                <p className={`dt profile-bio overflow-x-clip ${collapsed ? "opacity-0 z-0 -translate-y-full font-stretch-condensed whitespace-nowrap w-0 h-0 p-0 m-0" : "max-h-10 ml-2 mb-2 opacity-100"}`}>{jobTitle}</p>
+              </div>
             </div>
             {hamburger_button}
           </div>

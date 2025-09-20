@@ -187,11 +187,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hero-spacer {
-    @apply h-[clamp(10vh,30vh,30vh)];
+    @apply h-full;
 }
 
 .hero-image {
-    @apply rounded-2xl border-2 w-fit h-[clamp(75vh,75vh,90vh)] border-blue-400 object-cover;
+    @apply rounded-2xl border-2 w-[clamp(20vw,30vw,30vw)] h-[clamp(25vw,35vw,35vw)] mt-8 border-blue-400 object-cover object-bottom-right;
 }
 
 .social-button-text {
@@ -199,7 +199,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .bio-wrapper {
-    @apply flex flex-row gap-5 pr-5;
+    @apply flex flex-row gap-5 pr-5 h-[clamp(60vh,75vh,80vh)];
 }
 
 @media (max-width: 1120px) {
