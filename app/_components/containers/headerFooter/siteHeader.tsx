@@ -46,11 +46,10 @@ export default function SiteHeader(){
 
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
-    }, [collapsed]);
+    }, [collapsed, isMobile]);
 
     const name = "Jonathan Warner";
     const jobTitle = "Software Engineer";
-    const description = "Building software to make people's lives better";
 
     return (
             <header className="nav-bar">

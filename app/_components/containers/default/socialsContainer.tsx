@@ -1,7 +1,4 @@
 import SocialButton from "@components/buttons/socialButton";
-import EmailSvg from "@assets/icons/email.svg";
-import LinkedInSvg from "@assets/icons/linkedin.svg";
-import GitHubSvg from "@assets/icons/github.svg";
 
 export default function SocialsContainer() {
   return (
