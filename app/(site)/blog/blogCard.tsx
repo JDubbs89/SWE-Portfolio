@@ -11,7 +11,7 @@ interface BlogCardProps {
 export default function BlogCard(
     { props }: { props: BlogCardProps }, 
 ){
-    const cardURL = `/blog/${props.blogid}`
+    const cardURL = `/blog${props.blogid}`
     return (
         <Link className="blog-card cursor-pointer" href={cardURL}>
             <div className="blog-card-title">{props.title}</div>
