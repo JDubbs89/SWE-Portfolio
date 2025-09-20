@@ -29,7 +29,7 @@ export default function SiteHeader(){
     useEffect(() => setMounted(true), []);
     // Detect mobile width
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        const handleResize = () => setIsMobile(window.innerWidth < 1120);
         handleResize(); // set initial value
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
@@ -57,16 +57,13 @@ export default function SiteHeader(){
                 <div className="nav-container dt">
                     <ProfileContainer 
                         collapsed={collapsed} 
-                        isMobile={isMobile} 
                         name={name} 
                         jobTitle={jobTitle} 
-                        description={description} 
                         hamburger_button={
-                            <HamburgerButton isMobile={isMobile} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={handleMoblieMenuToggle}/>}/>
+                            <HamburgerButton setMobileMenuOpen={handleMoblieMenuToggle}/>}/>
                     
                     {/*Fade out on mobile/thin display width */}
-                    <nav className={`nav-button-container absolute md:relative top-0 right-0 flex dt gap-1
-                        ${isMobile ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
+                    <nav className={`nav-button-container absolute md:relative top-0 right-0 flex dt gap-1`}>
                         {navLinks.map((link) => (
                             <NavButton key={link.name} props={{ name: link.name, href: link.href, extra_styles: "" }} />
                         ))}

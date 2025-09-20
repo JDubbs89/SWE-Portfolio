@@ -4,15 +4,25 @@
 * {
     @apply box-border;
 }
+:root { 
+    --font-primary: 'var(--font-inter)'; 
+    --font-heading: 'var(--font-poppins)'; 
+}
 
 html {
     @apply scroll-smooth overflow-x-hidden overflow-y-scroll;
+    font-family: var(--font-primary), system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 body {
-    @apply font-sans m-0 p-0;
+    @apply m-0 p-0;
+    font-family: var(--font-primary), system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     -ms-overflow-style: none; /* IE/Edge legacy */
     scrollbar-width: none; /* Firefox */
+}
+
+h1,h2,h3 { 
+    font-family: var(--font-heading), var(--font-primary); 
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar {
@@ -22,6 +32,37 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 /* Navigation Classes */
+
+.email {
+    @apply bg-white my-auto mr-1;
+    mask-image: url('/assets/icons/email.svg');
+}
+.email:hover {
+    @apply bg-blue-400;
+}
+.linkedin {
+    @apply bg-white my-auto mr-1;
+    mask-image: url('/assets/icons/linkedin.svg');
+}
+.linkedin:hover {
+    @apply bg-blue-400;
+}
+.github {
+    @apply bg-white my-auto mr-1;
+    mask-image: url('/assets/icons/github.svg');
+}
+.github:hover {
+    @apply bg-blue-400;
+}
+
+.bio-header {
+    @apply flex-2 text-blue-400 font-bold text-[clamp(4rem,7vw,30rem)]
+}
+
+.bio-caption {
+    @apply flex-2 text-[clamp(1.5rem,4vw,3rem)];
+}
+
 .home-nav-button {
     @apply mr-auto ml-0 text-[clamp(1.25rem,4vw,1.875rem)] cursor-pointer font-bold text-[#f9f5ff] transition-all duration-300;
 }
@@ -33,10 +74,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply mx-0 my-0 px-[clamp(0.5rem,2vw,0.8rem)] py-[clamp(0.25rem,2vh,0.5rem)] rounded-full cursor-pointer bg-[rgba(10,10,10,0)] text-[#d0d2ec] transition-all duration-300 text-[clamp(0.9rem,2vw,1rem)] border  border-[rgba(83,134,228,0)];
 }
 .default-nav-button:hover {
-    @apply text-[#f9f5ff] bg-[rgba(83,134,228,0.15)];
+    @apply text-blue-400 bg-[rgba(83,134,228,0.15)];
 }
 .default-nav-button-active{
-    @apply border-[#8ba3f0];
+    @apply border-blue-400;
 }
 
 .nav-bar {
@@ -54,6 +95,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .nav-container {
     @apply max-w-[min(90vw,72rem)] mx-auto flex items-center justify-between w-full transition-all duration-300 ease-in-out;
 }
+
+@media (max-width: 1120px) {
+    .nav-button-container {
+        @apply w-0 p-0 m-0 border-0;
+    }
+}
+
 
 /* Typography Classes */
 .page-title {
@@ -132,6 +180,35 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .content-wrapper {
     @apply  max-w-[min(90vw,72rem)] mx-auto px-[clamp(1rem,4vw,1.5rem)] py-[clamp(1rem,2vw,2rem)];
+}
+
+.content-wrapper-px {
+    @apply  max-w-[min(90vw,72rem)] px-[clamp(1rem,4vw,1.5rem)] mx-auto;
+}
+
+.hero-spacer {
+    @apply h-[clamp(10vh,30vh,30vh)];
+}
+
+.hero-image {
+    @apply rounded-2xl border-2 w-fit h-min border-gray-100 object-cover;
+}
+
+.social-button-text {
+    @apply text-[clamp(0.75rem,2vw,1rem)] text-[#a8a8b0] ml-1;
+}
+
+.bio-wrapper {
+    @apply flex flex-row gap-5 pr-5;
+}
+
+@media (max-width: 1120px) {
+    .bio-wrapper {
+        @apply flex flex-col items-center text-left;
+    }
+    .hero-image {
+        @apply opacity-0 hidden;
+    }
 }
 
 .section-spacing {
@@ -304,7 +381,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 /* Enhanced responsive utilities */
-@media (max-width: 480px) {
+@media (max-width: 1120px) {
     .content-wrapper {
         @apply px-4;
     }
@@ -313,9 +390,21 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         @apply p-4;
     }
     
+    .nav-button-container {
+        @apply opacity-0 pointer-events-none;
+    }
+
     .nav-bar {
         @apply px-4;
     }
+}
+
+.profile-section {
+    @apply relative w-auto h-auto;
+}
+
+.profile {
+    @apply relative h-auto;
 }
 
 .profile-name {
@@ -335,19 +424,34 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dt-profile-info{
-    @apply flex flex-col ml-4 mt-2 transition-all duration-300;
+    @apply flex flex-col ml-4 my-auto transition-all duration-300;
 }
 
 .m-profile-container{
-    @apply flex flex-col w-min;
+    @apply flex flex-col w-min opacity-0 pointer-events-none h-0;
 }
 
 .m-profile-info{
-    @apply flex flex-col mx-2 my-auto;
+    @apply flex flex-col mt-0;
 }
 
 .profile-image {
-  @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 text-[#8ba3f0] shadow-sm transition-all duration-300 flex-shrink-0;
+  @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 text-blue-400 shadow-sm transition-all duration-300 flex-shrink-0;
+}
+
+@media (max-width: 1120px) {
+    .profile {
+        @apply w-full;
+    }
+    .profile-section {
+        @apply mx-0 w-screen;
+    }
+    .dt-profile-container {
+        @apply opacity-0 pointer-events-none absolute h-0 w-0 border-0;
+    }
+    .m-profile-container {
+        @apply opacity-100 w-full;
+    }
 }
 
 .fade-container {
@@ -367,14 +471,21 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hamburger{
-    @apply block w-5 h-0.75 bg-white mx-2.5 pointer-events-none rounded-2xl;
+    @apply block h-0.75 bg-white mx-2.5 pointer-events-none w-7 rounded-2xl transition-all duration-300;
 }
 
 .hamburger-button{
-    @apply cursor-pointer transition-all duration-100 flex-col w-6 h-6 justify-center items-center gap-1 border-[rgba(83,134,228,0.3)];
+    @apply cursor-pointer transition-all duration-100 flex-col h-8 justify-center items-center gap-1.5 border-[rgba(83,134,228,0.3)] absolute opacity-0 w-0;
 }
-.hamburger-button:hover{
-    @apply bg-[rgba(83,134,228,0.15)] rounded-full p-4 m-0;
+
+.hamburger-button:hover .hamburger{
+    @apply bg-blue-400 translate-x-full;
+}
+
+@media (max-width: 1120px) {
+    .hamburger-button {
+        @apply relative flex opacity-100 mr-5 w-8 z-10 pointer-events-auto;
+    }
 }
 
 @keyframes fadeIn {

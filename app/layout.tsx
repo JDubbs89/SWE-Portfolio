@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter, Poppins } from 'next/font/google'
 import SiteHeader from "./_components/containers/headerFooter/siteHeader";
 import SiteFooter from "./_components/containers/headerFooter/siteFooter";
 import FadeContainer from "./_components/containers/default/fadeContainer";
 import ScrollBar from "./_components/interact/scrollbar";
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap', weight: ['400','500','600','700'] });
+const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', display: 'swap', weight: ['600','700'] });
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +25,7 @@ export default function SiteLayout({
 }>) {
   return (
     
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       
       <body  className="page-container overflow-x-hidden">
         <ScrollBar/>
