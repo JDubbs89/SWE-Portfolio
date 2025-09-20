@@ -432,7 +432,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .m-profile-info{
-    @apply flex flex-col mt-0;
+    @apply flex flex-col mt-0 pointer-events-auto;
 }
 
 .profile-image {
