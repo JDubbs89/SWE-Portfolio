@@ -191,7 +191,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hero-image {
-    @apply rounded-2xl border-2 w-fit h-min border-gray-100 object-cover;
+    @apply rounded-2xl border-2 w-fit h-[clamp(75vh,75vh,90vh)] border-gray-100 object-cover;
 }
 
 .social-button-text {
@@ -207,7 +207,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         @apply flex flex-col items-center text-left;
     }
     .hero-image {
-        @apply opacity-0 hidden;
+        @apply opacity-0 h-0 w-0 border-0;
     }
 }
 
