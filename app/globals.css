@@ -92,7 +92,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .nav-container {
-    @apply max-w-[min(90vw,72rem)] mx-auto flex items-center justify-between w-full transition-all duration-1000 ease-in-out;
+    @apply max-w-[min(90vw,72rem)] mx-auto flex items-center justify-between w-full transition-all duration-300 ease-in-out;
 }
 
 @media (max-width: 1120px) {
@@ -404,7 +404,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .profile {
-    @apply relative h-auto transition-all duration-1000 ease-in-out;
+    @apply relative h-auto transition-all duration-300 ease-in-out;
 }
 
 .profile-name {
@@ -420,7 +420,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dt-profile-container{
-    @apply flex bg-[rgba(10,10,10,0.4)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b transition-all duration-1000 ease-in-out;
+    @apply flex bg-[rgba(10,10,10,0.4)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b transition-all duration-300 ease-in-out;
 }
 
 .dt-profile-info{
@@ -467,7 +467,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dt{
-    @apply transition-all duration-1000 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
 }
 
 .hamburger{
