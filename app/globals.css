@@ -483,11 +483,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .skill-section {
-    @apply relative w-auto h-auto flex flex-col justify-center font-light;
+    @apply relative w-auto h-[clamp(70vh,90vh,90vh)] flex flex-col justify-center font-light;
 }
 
 .carousel-item {
-    @apply transition-all duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-in-out w-full;
 }
 
 .carousel-category-name {
@@ -511,7 +511,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .carousel-skill-container {
-    @apply flex w-[clamp(30vw,85vw,100vw)] flex-wrap justify-start gap-5 px-2  py-2;
+    @apply flex flex-row justify-start gap-5 px-2 py-2;
 }
 
 .carousel-skill {
@@ -527,7 +527,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .carousel-skill-name {
-    @apply text-sm text-center wrap-normal w-min text-[#a8a8b0];
+    @apply text-sm text-center w-min text-[#a8a8b0];
 }
 
 .carousel-right {
@@ -542,6 +542,20 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     background-size: contain;
 }
 
+.carousel-scroll-wrapper {
+    @apply overflow-hidden w-fit flex-nowrap;
+}
+
+.carousel-left-scrolling-wrapper {
+    @apply flex w-fit justify-between overflow-hidden;
+    animation: scrollSkills 20s infinite linear;
+}
+
+.carousel-right-scrolling-wrapper {
+    @apply flex w-fit justify-between overflow-hidden;
+    animation: scrollSkills 20s infinite linear reverse;
+}
+
 @media (max-width: 1120px) {
     .hamburger-button {
         @apply relative flex opacity-100 mr-5 w-8 z-10 pointer-events-auto;
@@ -551,6 +565,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         @apply w-15 h-15 p-2;
     }
 
+}
+
+
+@keyframes scrollSkills {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes fadeIn {

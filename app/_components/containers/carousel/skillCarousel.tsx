@@ -23,11 +23,11 @@ export default function SkillCarousel(
     return (
         <div className="skill-carousel content-wrapper">
             <h2 className="section-title">Skills</h2>
-                <div className="flex flex-wrap flex-start w-full h-full">
-                    {categories.map((category) => ( // Map through categories
-                        <SkillCategory key={category.name} name={category.name} skills={category.skills} className={`carousel-item`}/>
+                <div className="flex flex-col gap-1 w-full"> {/* carousel scrolling div */}
+                    {categories.map((category,index) => ( // Map through categories
+                        <SkillCategory key={category.name} name={category.name} skills={category.skills} className={`max-w-full p-0 m-0`} direction={index%2==0 ? "left" : "right"}/>
                     ))}
-                </div> {/* carousel */}
+                </div>
         </div>
     )
 }
