@@ -14,7 +14,7 @@ export default function BioSection (){
           </div>
           <span className="hero-spacer"></span>
         </div>
-        <Image src="/assets/srphoto3.jpg" alt="Headshot" width={1599} height={1142} className="hero-image"/>
+        <Image src="/assets/srphoto2.jpg" alt="Headshot" width={1599} height={1142} className="hero-image"/>
       </div>
     </BaseSection>
   )

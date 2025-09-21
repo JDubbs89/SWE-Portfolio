@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ContentContainer from '../../_components/containers/default/contentContainer';
 import BaseSection from "@components/sections/baseSection";
 import BioSection from "@components/sections/bioSection";
+import SkillSection from "@components/sections/skillSection";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div>
       <BioSection/>
+      <SkillSection/>
       <BaseSection className="flex flex-row">
 
         <ContentContainer title="Home" header="Background" content="Hello, my name is Jonathan! I am a computer science student at Trine University in Angola Indiana.

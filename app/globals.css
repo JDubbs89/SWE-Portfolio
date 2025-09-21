@@ -10,7 +10,7 @@
 }
 
 html {
-    @apply scroll-smooth overflow-x-hidden overflow-y-scroll;
+    @apply scroll-smooth overflow-x-hidden overflow-y-scroll transition-all duration-300;
     font-family: var(--font-primary), system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
@@ -37,22 +37,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply bg-white my-auto mr-1;
     mask-image: url('/assets/icons/email.svg');
 }
-.email:hover {
-    @apply bg-blue-400;
-}
 .linkedin {
     @apply bg-white my-auto mr-1;
     mask-image: url('/assets/icons/linkedin.svg');
 }
-.linkedin:hover {
-    @apply bg-blue-400;
-}
 .github {
     @apply bg-white my-auto mr-1;
     mask-image: url('/assets/icons/github.svg');
-}
-.github:hover {
-    @apply bg-blue-400;
 }
 
 .bio-header {
@@ -76,6 +67,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .default-nav-button:hover {
     @apply text-blue-400 bg-[rgba(83,134,228,0.15)];
 }
+.default-nav-button:hover p {
+    @apply text-blue-400;
+}
+.default-nav-button:hover img {
+    @apply bg-blue-400;
+}
+
+
 .default-nav-button-active{
     @apply border-blue-400;
 }
@@ -93,7 +92,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .nav-container {
-    @apply max-w-[min(90vw,72rem)] mx-auto flex items-center justify-between w-full transition-all duration-300 ease-in-out;
+    @apply max-w-[min(90vw,72rem)] mx-auto flex items-center justify-between w-full transition-all duration-1000 ease-in-out;
 }
 
 @media (max-width: 1120px) {
@@ -197,6 +196,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .social-button-text {
     @apply text-[clamp(0.75rem,2vw,1rem)] text-[#a8a8b0] ml-1;
 }
+
 
 .bio-wrapper {
     @apply flex flex-row gap-5 pr-5 h-[clamp(60vh,75vh,80vh)];
@@ -404,7 +404,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .profile {
-    @apply relative h-auto;
+    @apply relative h-auto transition-all duration-1000 ease-in-out;
 }
 
 .profile-name {
@@ -412,15 +412,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .profile-job-title {
-  @apply text-[#8ba3f0] font-medium leading-snug text-[clamp(1rem,2.5vw,1.25rem)];
+  @apply text-[#8ba3f0] font-medium leading-snug text-[clamp(1rem,2.5vw,1.25rem)] transition-all duration-300;
 }
 
 .profile-bio{
-    @apply text-[clamp(0.75rem,2vw,0.875rem)] text-[#a8a8b0];
+    @apply text-[clamp(0.75rem,2vw,0.875rem)] text-[#a8a8b0] transition-all duration-300 ease-in-out;
 }
 
 .dt-profile-container{
-    @apply flex bg-[rgba(10,10,10,0.4)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b w-min;
+    @apply flex bg-[rgba(10,10,10,0.4)] bg-linear-0  border-[rgba(83,134,228,0.2)] border-r border-t border-b transition-all duration-1000 ease-in-out;
 }
 
 .dt-profile-info{
@@ -428,15 +428,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .m-profile-container{
-    @apply flex flex-col w-min opacity-0 pointer-events-none h-0;
+    @apply flex flex-col w-min opacity-0 pointer-events-none h-0 transition-all duration-300;
 }
 
 .m-profile-info{
-    @apply flex flex-col mt-0 pointer-events-auto;
+    @apply flex flex-col mt-0 pointer-events-auto transition-all duration-300;
 }
 
 .profile-image {
-  @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 text-blue-400 shadow-sm transition-all duration-300 flex-shrink-0;
+  @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 ring-3 ring-blue-100/10 text-blue-400 transition-all duration-300 flex-shrink-0;
 }
 
 @media (max-width: 1120px) {
@@ -467,7 +467,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dt{
-    @apply transition-all duration-300 ease-in-out;
+    @apply transition-all duration-1000 ease-in-out;
 }
 
 .hamburger{
@@ -482,10 +482,75 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply bg-blue-400 translate-x-full;
 }
 
+.skill-section {
+    @apply relative w-auto h-auto flex flex-col justify-center font-light;
+}
+
+.carousel-item {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.carousel-category-name {
+    @apply text-2xl font-medium;
+}
+
+.carousel-category-active {
+    @apply border-1;
+}
+
+.carousel-category-hidden {
+    @apply border-0 opacity-0 pointer-events-none absolute w-0 h-0;
+}
+
+.carousel-category-inactive-right {
+    @apply border-0 opacity-50 pointer-events-none translate-x-full absolute;
+}
+
+.carousel-category-inactive-left {
+    @apply border-0 opacity-50 pointer-events-none -translate-x-full absolute;
+}
+
+.carousel-skill-container {
+    @apply flex w-[clamp(30vw,85vw,100vw)] flex-wrap justify-start gap-5 px-2  py-2;
+}
+
+.carousel-skill {
+    @apply flex flex-col items-center min-w-[5rem] h-full transition-all duration-300 ease-in-out cursor-pointer;
+}
+
+.carousel-skill:hover .carousel-skill-icon {
+    @apply border-blue-400 scale-105 shadow-lg;
+}
+
+.carousel-skill-icon {
+    @apply bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)] mb-2 w-20 h-20 object-contain p-3 transition-all duration-200 ease-out;
+}
+
+.carousel-skill-name {
+    @apply text-sm text-center wrap-normal w-min text-[#a8a8b0];
+}
+
+.carousel-right {
+    @apply mr-2 ml-auto my-auto w-10 h-10 opacity-100;
+    background-image: url('/assets/icons/chevron-right.svg');
+    background-size: contain;
+}
+
+.carousel-left {
+    @apply ml-2 mr-auto my-auto w-10 h-10 opacity-100;
+    background-image: url('/assets/icons/chevron-left.svg');
+    background-size: contain;
+}
+
 @media (max-width: 1120px) {
     .hamburger-button {
         @apply relative flex opacity-100 mr-5 w-8 z-10 pointer-events-auto;
     }
+
+    .carousel-skill-icon {
+        @apply w-15 h-15 p-2;
+    }
+
 }
 
 @keyframes fadeIn {
