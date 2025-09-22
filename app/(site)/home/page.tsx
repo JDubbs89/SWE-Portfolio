@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <BioSection/>
       <SkillSection/>
-      <BaseSection className="flex flex-row">
+      {/* <BaseSection className="flex flex-row">
 
         <ContentContainer title="Home" header="Background" content="Hello, my name is Jonathan! I am a computer science student at Trine University in Angola Indiana.
           I am an aspiring software developer, experienced in Python, JavaScript, SQL, and more."
@@ -40,7 +40,7 @@ export default function Home() {
           unauthorized access to sensitive information. "
         />
 
-      </BaseSection>
+      </BaseSection> */}
     </div>
   )
 }

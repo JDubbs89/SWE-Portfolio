@@ -26,12 +26,6 @@ export default function SkillCategory(
                 {skills.map((skill) => ( // Map through skills in each category
                 <SkillBox key={skill.name} name={skill.name} icon={skill.icon} category={skill.category} className="inline-block mt-2 mx-5 mb-0 p-0"/>
                 ))}
-                {skills.map((skill) => ( // Map through skills in each category
-                <SkillBox key={skill.name} name={skill.name} icon={skill.icon} category={skill.category} className="inline-block mt-2 mx-5 mb-0 p-0"/>
-                ))}
-                {skills.map((skill) => ( // Map through skills in each category
-                <SkillBox key={skill.name} name={skill.name} icon={skill.icon} category={skill.category} className="inline-block mt-2 mx-5 mb-0 p-0"/>
-                ))}
             </div>
         </div>
     )
