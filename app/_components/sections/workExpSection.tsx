@@ -1,12 +1,13 @@
 import BaseSection from "./baseSection";
 import PositionContainer from "@components/containers/default/positionContainer";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function WrkExpSection(){
     return(
         <BaseSection className="flex justify-center my-5">
             
-            <div className="text-5xl font-bold content-wrapper">My Journey
+            <div className="text-5xl font-bold content-wrapper"><div className="flex justify-between">My Journey <Link href={"about"} className="ghost-button my-auto text-[clamp(0.8rem,1rem,1rem)] font-normal">Learn More</Link></div>
             <div className="flex flex-col w-fit h-full mt-5 justify-between content-wrapper-px"> {/* col container for containers */}
                 <PositionContainer 
                     positionTitle="Information Technology Intern"
