@@ -185,6 +185,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply  max-w-[min(90vw,72rem)] px-[clamp(1rem,4vw,1.5rem)] mx-auto;
 }
 
+.bio-section {
+    @apply flex justify-center h-screen;
+}
+
 .hero-spacer {
     @apply h-full;
 }
@@ -199,15 +203,25 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .bio-wrapper {
-    @apply flex flex-row gap-5 pr-5 h-[clamp(60vh,75vh,80vh)];
+    @apply flex flex-row gap-5 pr-5 h-full;
 }
 
 @media (max-width: 1120px) {
+    .bio-section {
+        @apply h-fit mb-20;
+    }
     .bio-wrapper {
-        @apply flex flex-col items-center text-left;
+        @apply flex items-center flex-col-reverse text-left mx-0 w-full h-fit;
+    }
+    
+    .bio-header {
+        @apply h-[50vh];
+    }
+    .bio-caption {
+        @apply my-5;
     }
     .hero-image {
-        @apply opacity-0 h-0 w-0 border-0;
+        @apply opacity-100 m-0 w-full h-[40vh] object-center;
     }
 }
 
@@ -365,7 +379,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 /* Demo specific styles */
 .base-section {
-    @apply p-[clamp(1rem,3vw,1.5rem)] my-[clamp(1.5rem,0.5vh,2rem)] backdrop-blur;
+    @apply my-[clamp(1.5rem,0.5vh,2rem)] gap-5 backdrop-blur;
 }
 
 .base-section-style {
@@ -383,11 +397,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /* Enhanced responsive utilities */
 @media (max-width: 1120px) {
     .content-wrapper {
-        @apply px-4;
+        @apply px-0 mx-0 block justify-center;
     }
     
     .base-section {
-        @apply p-4;
+        @apply mx-4;
     }
     
     .nav-button-container {
@@ -439,7 +453,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   @apply overflow-hidden mt-auto mb-auto rounded-full object-scale-down border-2 ring-3 ring-blue-100/10 text-blue-400 transition-all duration-300 flex-shrink-0;
 }
 
+.section-title-text {
+    @apply text-[clamp(1.25rem,3rem,3rem)] font-bold whitespace-nowrap;
+}
+
+
 @media (max-width: 1120px) {
+    .section-title-text {
+        @apply text-[10vw];
+    }
     .profile {
         @apply w-full;
     }
@@ -483,7 +505,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .skill-section {
-    @apply relative w-auto h-[clamp(70vh,90vh,90vh)] flex flex-col justify-center font-light;
+    @apply relative w-auto h-[clamp(40vh,full,fit)] flex flex-col justify-center font-light;
 }
 
 .carousel-item {
@@ -588,6 +610,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 }
 
+.work-section {
+    @apply flex justify-center h-[clamp(80vh,90vh,fit)] mb-10;
+}
 .timeline-container {
     @apply flex flex-col w-fit h-full mt-5 justify-between;
 }
@@ -596,7 +621,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply flex flex-row my-0 py-0 h-full w-fit;
 }
 .position-card {
-    @apply w-full ml-2 mt-8 p-4 bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)]  transition-all duration-300 ease-in-out;
+    @apply w-full h-fit ml-2 mt-8 p-4 bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)]  transition-all duration-300 ease-in-out;
 }
 
 .position-card:hover {
@@ -612,12 +637,86 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .position-card-bullet-list {
-    @apply flex flex-col ml-4 mt-3 gap-1 text-[clamp(0.70rem,0.9rem,0.9rem)]/5 font-light text-gray-400;
+    @apply relative flex flex-col ml-4 mt-3 gap-1 text-[clamp(0.70rem,0.9rem,0.9rem)]/5 font-light text-gray-400 transition-all duration-300 ease-in-out;
 }
 
 .position-card-bullet {
-    @apply mb-1;
+    @apply mb-1 transition-all duration-300 ease-in-out;
 }
+
+@media (max-width: 1120px) {
+    .position-card-bullet-list{
+        @apply h-auto -translate-y-full m-0 p-0 overflow-hidden;
+    }
+    .position-card-bullet {
+        @apply opacity-0 h-0 p-0 m-0;
+    }
+}
+
+/* Project Styles */
+
+.project-section {
+    @apply flex justify-center h-[clamp(80vh,90vh,fit)];
+}
+
+.project-timeline-container {
+    @apply flex flex-row my-0 py-0 gap-0 h-fit w-fit;
+}
+
+.project-timeline-container-r {
+    @apply flex flex-row-reverse my-0 py-0 h-full w-fit;
+}
+
+.project-card {
+    @apply w-full h-fit mt-8 p-0 bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-r-[clamp(0.75rem,2vw,1rem)]  transition-all duration-300 ease-in-out;
+}
+
+.project-card:hover {
+    @apply border-blue-400 shadow-lg scale-99 shadow-white/15;
+}
+
+.project-card:hover .project-card-image {
+    @apply filter brightness-75 blur-[0.05rem];
+}
+
+.project-card-image {
+    @apply w-full max-h-140 mb-4 mt-0 mx-0 p-0 bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-b-[rgba(83,134,228,0.2)] rounded-tl-[clamp(0.75rem,2vw,1rem)] rounded-tr-[clamp(0.75rem,2vw,1rem)]  transition-all duration-300 ease-in-out object-cover object-center;
+}
+
+.project-card-title {
+    @apply text-[clamp(1.25rem,1.5rem,1.5rem)] font-semibold mb-2;
+}
+
+.project-card-org-title {
+    @apply ml-2 mt-2 mb-1 text-[clamp(0.70rem,0.9rem,0.9rem)] font-medium text-blue-300;
+}
+
+.project-card-bullet-list {
+    @apply relative flex flex-col ml-4 mt-3 gap-1 text-[clamp(0.70rem,0.9rem,0.9rem)]/5 font-light text-gray-400 transition-all duration-300 ease-in-out;
+}
+
+.project-card-bullet {
+    @apply mb-1 transition-all duration-300 ease-in-out;
+}
+
+@media (max-width: 1120px) {
+    .project-card-bullet-list{
+        @apply h-auto -translate-y-full m-0 p-0 overflow-hidden;
+    }
+    .project-card-bullet {
+        @apply opacity-0 h-0 p-0 m-0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 @keyframes scrollSkills {
   from {
@@ -631,13 +730,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 @keyframes fadeIn {
   from { 
     opacity: 0;
-    transform: translateY(1%) translateX(0.5%);
+    transform: translateY(1%);
  }
   to { 
     opacity: 1; 
-    transform: translateY(0%) translateX(0%);
+    transform: translateY(0%);
 }
 }
 .animate-fadeIn {
-  animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.35s ease-out;
 }

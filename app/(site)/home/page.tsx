@@ -4,6 +4,7 @@ import BaseSection from "@components/sections/baseSection";
 import BioSection from "@components/sections/bioSection";
 import SkillSection from "@components/sections/skillSection";
 import WrkExpSection from "@components/sections/workExpSection";
+import ProjectExpSection from "@components/sections/projectExpSection";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -11,10 +12,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <BioSection/>
       <WrkExpSection/>
       <SkillSection/>
+      <ProjectExpSection/>
       
     </div>
   )

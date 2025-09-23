@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function WrkExpSection(){
     return(
-        <BaseSection className="flex justify-center base-section">
+        <BaseSection className="work-section base-section">
             
-            <div className="content-wrapper my-5">
-                <div className="flex justify-between text-[clamp(1.25rem,3rem,3rem)] font-bold whitespace-nowrap">
-                    My Journey 
+            <div className="content-wrapper">
+                <div className="flex justify-between w-full flex-wrap">
+                    <div className="section-title-text">My Journey</div>
                     <Link href={"about"} className="ghost-button my-auto text-[clamp(0.6rem,1rem,1rem)] whitespace-nowrap font-normal">
                         Learn More
                     </Link>

@@ -39,8 +39,10 @@ export default function SkillSection() {
     ];
         return (
         <section id="skills" className="skill-section base-section">
-            <div className="text-[clamp(1.25rem,3rem,3rem)] font-bold whitespace-nowrap content-wrapper">Skills        
-            <SkillCarousel categories={skillCategories}/></div>
+            <div className="content-wrapper">
+                <div className="section-title-text">Technologies</div>      
+                <SkillCarousel categories={skillCategories}/>
+            </div>
         </section>
     )
 }
