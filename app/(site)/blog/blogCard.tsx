@@ -13,7 +13,7 @@ export default function BlogCard(
 ){
     const cardURL = `/blog${props.blogid}`
     return (
-        <Link className="blog-card cursor-pointer" href={cardURL}>
+        <Link className="blog-card cursor-pointer w-full mx-auto" href={cardURL}>
             <div className="blog-card-title">{props.title}</div>
             <div className="blog-card-excerpt">{props.description}</div>
             <div className="blog-card-meta">

@@ -6,10 +6,10 @@ export const metadata = {
 export default function Blog() {
   return (
     <div className="content-wrapper">
-      <h1 className="page-title">Blog</h1>
+      <div className="page-title">Blog</div>
       <div className="base-section">
-        <h1 className="section-title">Recent Posts</h1>
-        <div className="grid-2 mb-2">
+        <div className="section-title">Recent Posts</div>
+        <div className="flex flex-col w-full gap-4 mx-auto justify-start">
           <BlogCard 
             props={{ title: "Understanding the Windows Audio System API", 
             description: "Discussing how windows manages its audio routing.", 
