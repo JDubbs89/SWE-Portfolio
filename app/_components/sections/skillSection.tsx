@@ -69,9 +69,6 @@ export default function SkillSection() {
             
             
             {/* <ParagraphContainer paras={skillSectionParas} className="flex flex-col justify-start" /> */}
-        
-        
-        
         </section>
     )
 }

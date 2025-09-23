@@ -25,7 +25,7 @@ export default function PositionContainer(
                 {(last ? <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{startDate}</div> : null)}
             </div>
             
-            <div className="w-full ml-2 mt-6 mb-4 p-4 bg-gradient-to-br from-[rgba(15,15,20,0.4)] via-[rgba(10,10,10,0.8)] to-[rgba(5,41,158,0.05)] border border-[rgba(83,134,228,0.2)] rounded-[clamp(0.75rem,2vw,1rem)]">
+            <div className="position-container">
                 <div className="text-[clamp(1.25rem,1.5rem,1.5rem)] font-semibold mb-2">{positionTitle}</div>
                 <div className=" ml-2 mt-2 mb-1 text-[clamp(0.70rem,0.9rem,0.9rem)] font-medium text-blue-400">{companyName} - {location}</div>
                     <div className="flex flex-col ml-4 mt-3 gap-1 text-[clamp(0.70rem,0.9rem,0.9rem)]/5 font-light text-gray-400">
