@@ -221,7 +221,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         @apply my-5;
     }
     .hero-image {
-        @apply opacity-100 m-0 w-full h-[40vh] object-center;
+        @apply opacity-100 m-0 w-full h-[40vh] object-top;
     }
 }
 
@@ -611,7 +611,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .work-section {
-    @apply flex justify-center h-[clamp(80vh,90vh,fit)] mb-10;
+    @apply flex justify-center h-fit mb-10;
 }
 .timeline-container {
     @apply flex flex-col w-fit h-full mt-5 justify-between;
@@ -633,7 +633,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .position-card-org-title {
-    @apply ml-2 mt-2 mb-1 text-[clamp(0.70rem,0.9rem,0.9rem)] font-medium text-blue-300;
+    @apply ml-2 my-auto text-[clamp(0.70rem,0.9rem,0.9rem)] font-medium text-blue-300;
 }
 
 .position-card-bullet-list {

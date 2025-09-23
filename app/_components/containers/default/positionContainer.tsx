@@ -17,7 +17,7 @@ export default function PositionContainer(
 ){
     return (
         <div className="position-timeline-container">
-            <div className="flex flex-col gap-0"> {/* Timeline Spans/Dates */}
+            <div className="flex flex-col gap-0 w-5"> {/* Timeline Spans/Dates */}
                 <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{endDate}</div>
                 <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-400"></span>
                 <span className="rounded-full h-5 w-2 ml-3.25 bg-white"></span>
@@ -27,7 +27,7 @@ export default function PositionContainer(
             
             <div className={`position-card ${last ? "mb-10" : ""}`}>
                 <div className="position-card-title">{positionTitle}</div>
-                <div className="position-card-org-title">{companyName} - {location}</div>
+                <div className="position-card-org-title">{companyName} • {location}</div>
                     <div className="position-card-bullet-list">
                         {bullets.map((bullet, index) => (
                             <div key={index} className="position-card-bullet">

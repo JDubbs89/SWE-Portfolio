@@ -17,26 +17,29 @@ export default function ProjectExpSection(){
                     <ProjectContainer 
                         projectTitle="Community Minecraft Server"
                         projectType="Oracle Cloud Server Instance"
-                        techStack="Jackson, MI"
-                        bullets={["Crafted unique and entertaining projects in a small team of peers, using Python to structure game logic, graphics, and sound to create fully functional games including a 2D-platformer, snake game, and more.",
-                            "Architected personal web projects using HTML, CSS, and JavaScript to create interactive and visually appealing sites, including a timer webapp, treasure hunt game, madlibs generator, and more.", 
-                            "Developed a singleplayer, third-person game using Unreal Engine 4/5, implementing complex enemy AI, player movement and ability systems, and static level design to create a fun and satisfying horde-style melee fighting gameplay experience."]}
+                        techStack="Oracle, Docker, Pterodactyl Panel, Nginx, MariaDB"
+                        imageUrl="/assets/images/oracle-server.png"
+                        bullets={["Architected and deployed a Minecraft server on Oracle Cloud VM running Linux OS, supporting up to 20 friends and community members while managing server performance and resource optimization.",
+                            "Developed containerized server deployment using Docker and Pterodactyl Panel, reducing setup and maintenance time by 60% and enabling streamlined management of multiple server instances.", 
+                            "Implemented Cloudflare DNS and CDN services for custom domain management and DDoS protection, improving connection stability and reducing latency by 30% for players with low internet speeds."]}
                     />
                     <ProjectContainer 
                         projectTitle="Game Session Manager"
                         projectType="Microservice"
                         techStack="Python, FastAPI, PostgreSQL, Docker"
-                        bullets={["Crafted unique and entertaining projects in a small team of peers, using Python to structure game logic, graphics, and sound to create fully functional games including a 2D-platformer, snake game, and more.",
-                            "Architected personal web projects using HTML, CSS, and JavaScript to create interactive and visually appealing sites, including a timer webapp, treasure hunt game, madlibs generator, and more.", 
-                            "Developed a singleplayer, third-person game using Unreal Engine 4/5, implementing complex enemy AI, player movement and ability systems, and static level design to create a fun and satisfying horde-style melee fighting gameplay experience."]}
+                        imageUrl="/assets/images/session-manager.png"
+                        bullets={["Designed a lightweight Python microservice with FastAPI for managing user friendships and game sessions, allowing for optimized real-time data interactions between game clients without a continuous connection.",
+                            "Built scalable backend infrastructure by containerizing the FastAPI service with Docker as well as a PostgreSQL database, allowing for dynamic data storage and swift deployment.", 
+                            "Implemented JWT-based authentication and authorization in conjunction with OAuth2 for simple and secure user login functionality, preventing unauthorized access to sensitive information."]}
                     />
                     <ProjectContainer 
                         projectTitle="Grace Church Website Revamp"
-                        projectType="Jackson Area Career Center"
-                        techStack="Jackson, MI"
-                        bullets={["Crafted unique and entertaining projects in a small team of peers, using Python to structure game logic, graphics, and sound to create fully functional games including a 2D-platformer, snake game, and more.",
-                            "Architected personal web projects using HTML, CSS, and JavaScript to create interactive and visually appealing sites, including a timer webapp, treasure hunt game, madlibs generator, and more.", 
-                            "Developed a singleplayer, third-person game using Unreal Engine 4/5, implementing complex enemy AI, player movement and ability systems, and static level design to create a fun and satisfying horde-style melee fighting gameplay experience."]}
+                        projectType="Website"
+                        techStack="Next.js, Typescript, TailwindCSS"
+                        imageUrl="/assets/images/grace-website-revamp.png"
+                        bullets={["Designing and building a modern responsive webpage as a redesign of the current Grace Church official website, improving readability and user experience, as well as better organizing church information.",
+                            "Using Next.js, Typescript, and TailwindCSS to develop a robust and performant site framework utilizing best practices to ensure a strong and maintainable project structure.", 
+                            "Working with members of Grace Church to ensure that the website aligns with user needs, collaborating with current website management team to ensure smooth project integration as well as compliance with church standards."]}
                     />
                 </div>
             </div>
