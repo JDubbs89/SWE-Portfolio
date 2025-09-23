@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BioSection (){
   return (
-    <BaseSection className="flex justify-center my-5">
+    <BaseSection className="flex justify-center base-section">
       <div className="content-wrapper-px bio-wrapper">
         <div className="content-wrapper-px flex flex-col gap-2">
           <div className="bio-header">

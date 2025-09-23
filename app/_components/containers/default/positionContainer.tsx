@@ -16,21 +16,21 @@ export default function PositionContainer(
     }: ContainerProps
 ){
     return (
-        <div className="flex flex-row my-0 py-0 h-full w-fit">
-            <div className="flex flex-col gap-0">
+        <div className="position-timeline-container">
+            <div className="flex flex-col gap-0"> {/* Timeline Spans/Dates */}
                 <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{endDate}</div>
                 <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-400"></span>
                 <span className="rounded-full h-5 w-2 ml-3.25 bg-white"></span>
-                <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-300"></span>
+                <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-400"></span>
                 {(last ? <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{startDate}</div> : null)}
             </div>
             
-            <div className="position-container">
-                <div className="text-[clamp(1.25rem,1.5rem,1.5rem)] font-semibold mb-2">{positionTitle}</div>
-                <div className=" ml-2 mt-2 mb-1 text-[clamp(0.70rem,0.9rem,0.9rem)] font-medium text-blue-400">{companyName} - {location}</div>
-                    <div className="flex flex-col ml-4 mt-3 gap-1 text-[clamp(0.70rem,0.9rem,0.9rem)]/5 font-light text-gray-400">
+            <div className={`position-card ${last ? "mb-10" : ""}`}>
+                <div className="position-card-title">{positionTitle}</div>
+                <div className="position-card-org-title">{companyName} - {location}</div>
+                    <div className="position-card-bullet-list">
                         {bullets.map((bullet, index) => (
-                            <div key={index} className="mb-1">
+                            <div key={index} className="position-card-bullet">
                                 • {bullet}
                             </div>
                         ))}

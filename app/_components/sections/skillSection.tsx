@@ -4,7 +4,7 @@ import ParagraphContainer from "@components/text/paragraphContainer";
 export default function SkillSection() {
     const skillCategories = [
         {
-            name: "Programming Languages",
+            name: "Skills 0",
             skills: [
                 { name: "JavaScript", icon: "/assets/skills/javascript.svg", category: "Programming Languages" },
                 { name: "Python", icon: "/assets/skills/python.svg", category: "Programming Languages" },
@@ -20,7 +20,7 @@ export default function SkillSection() {
             ],
         },
         {
-            name: "Frameworks/Libraries",
+            name: "Skills 1",
             skills: [
                 { name: "Next.js", icon: "/assets/skills/nextjs.svg", category: "Frameworks/Libraries" },
                 { name: "FastAPI", icon: "/assets/skills/fastapi.svg", category: "Frameworks/Libraries" },
@@ -35,40 +35,12 @@ export default function SkillSection() {
                 { name: "Agile", icon: "/assets/skills/agile.svg", category: "Developer Tools/Platforms" },
                 { name: "JSON", icon: "/assets/skills/json.svg", category: "Developer Tools/Platforms" },
             ],
-        },
-        // {
-        //     name: "Databases",
-        //     skills: [
-        //         { name: "MySQL", icon: "/assets/skills/mysql.svg", category: "Databases" },
-        //         { name: "SQLite", icon: "/assets/skills/sqlite.svg", category: "Databases" },
-        //         { name: "PostgreSQL", icon: "/assets/skills/postgresql.svg", category: "Databases" },
-        //         { name: "MariaDB", icon: "/assets/skills/mariadb.svg", category: "Databases" },
-        //         { name: "Microsoft SQL Server", icon: "/assets/skills/microsoftsql.svg", category: "Databases" },
-        //     ],
-        // },
-        // {
-        //     name: "Developer Tools/Platforms",
-        //     skills: [
-        //         { name: "Git", icon: "/assets/skills/git.svg", category: "Developer Tools/Platforms" },
-        //         { name: "Gitlab", icon: "/assets/skills/gitlab.svg", category: "Developer Tools/Platforms" },
-        //         { name: "Docker", icon: "/assets/skills/docker.svg", category: "Developer Tools/Platforms" },
-        //         { name: "Linux", icon: "/assets/skills/linux.svg", category: "Developer Tools/Platforms" },
-        //         { name: "Oracle Cloud", icon: "/assets/skills/oraclecloud.svg", category: "Developer Tools/Platforms" },
-        //         { name: "REST APIs", icon: "/assets/skills/restapi.svg", category: "Developer Tools/Platforms" },
-        //         { name: "Agile", icon: "/assets/skills/agile.svg", category: "Developer Tools/Platforms" },
-        //         { name: "JSON", icon: "/assets/skills/json.svg", category: "Developer Tools/Platforms" },
-
-        //     ],
-        // },
+        }
     ];
-        const skillSectionParas: string[] = ["I am an aspiring software developer, experienced in Python, JavaScript, SQL, and more."]
         return (
         <section id="skills" className="skill-section base-section">
-            <div className="text-5xl font-bold content-wrapper">Skills                
+            <div className="text-[clamp(1.25rem,3rem,3rem)] font-bold whitespace-nowrap content-wrapper">Skills        
             <SkillCarousel categories={skillCategories}/></div>
-            
-            
-            {/* <ParagraphContainer paras={skillSectionParas} className="flex flex-col justify-start" /> */}
         </section>
     )
 }

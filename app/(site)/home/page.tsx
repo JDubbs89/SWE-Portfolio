@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div>
       <BioSection/>
-      <SkillSection/>
       <WrkExpSection/>
+      <SkillSection/>
       
     </div>
   )

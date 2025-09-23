@@ -5,32 +5,38 @@ import Image from "next/image";
 
 export default function WrkExpSection(){
     return(
-        <BaseSection className="flex justify-center my-5">
+        <BaseSection className="flex justify-center base-section">
             
-            <div className="text-5xl font-bold content-wrapper"><div className="flex justify-between">My Journey <Link href={"about"} className="ghost-button my-auto text-[clamp(0.8rem,1rem,1rem)] font-normal">Learn More</Link></div>
-            <div className="flex flex-col w-fit h-full mt-5 justify-between content-wrapper-px"> {/* col container for containers */}
-                <PositionContainer 
-                    positionTitle="Information Technology Intern"
+            <div className="content-wrapper my-5">
+                <div className="flex justify-between text-[clamp(1.25rem,3rem,3rem)] font-bold whitespace-nowrap">
+                    My Journey 
+                    <Link href={"about"} className="ghost-button my-auto text-[clamp(0.6rem,1rem,1rem)] whitespace-nowrap font-normal">
+                        Learn More
+                    </Link>
+                </div>
+                <div className="timeline-container content-wrapper-px"> {/* col container for containers */}
+                    <PositionContainer 
+                        positionTitle="Information Technology Intern"
                     startDate="May 2025"
                     endDate="Aug 2025"
                     companyName="Martinrea International"
                     location="Jonesville, MI"
                     bullets={["Spearheaded domain migration of 120+ machine operator kiosks while developing and maintaining detailed documentation, massively reducing network overhead by uniting systems under one corporate policy.",
                         "Created a robust and easy-to-use PA system for meetings, increasing audibility for listeners farthest from the speaker by more than 30% and resulting in improved team cohesion and communication.", 
-                        "Monitored and resolved various operator issues and system malfunctions, reducing machine downtime and increasing productivity through quick response times and troubleshooting endeavors."]}
+                            "Monitored and resolved various operator issues and system malfunctions, reducing machine downtime and increasing productivity through quick response times and troubleshooting endeavors."]}
                     />
-                <PositionContainer 
-                    positionTitle="Crew Leader"
+                    <PositionContainer 
+                        positionTitle="Crew Leader"
                     startDate="Aug 2024"
                     endDate="May 2025"
                     companyName="Johnny's Markets"
                     location="Angola, IN"
                     bullets={["Interviewed and trained five employees while collaborating with a team of 14, increasing morale and reducing work related stress on team members by more than 25% by improving workload distribution.",
                         "Managed routine store operations in place of management, allowing for an increase in productivity and a 15% reduction in labor costs due to reduced managerial work hours.", 
-                        "Collaborated with team members to perform quarterly deep cleaning runs of the worksite, resulting in multiple 98%+ scores on white-glove inspections."]}
+                            "Collaborated with team members to perform quarterly deep cleaning runs of the worksite, resulting in multiple 98%+ scores on white-glove inspections."]}
                     />
-                <PositionContainer 
-                    positionTitle="CIT Student"
+                    <PositionContainer 
+                        positionTitle="CIT Student"
                     startDate="Aug 2022"
                     endDate="May 2024"
                     companyName="Jackson Area Career Center"
@@ -38,11 +44,10 @@ export default function WrkExpSection(){
                     bullets={["Crafted unique and entertaining projects in a small team of peers, using Python to structure game logic, graphics, and sound to create fully functional games including a 2D-platformer, snake game, and more.",
                         "Architected personal web projects using HTML, CSS, and JavaScript to create interactive and visually appealing sites, including a timer webapp, treasure hunt game, madlibs generator, and more.", 
                         "Developed a singleplayer, third-person game using Unreal Engine 4/5, implementing complex enemy AI, player movement and ability systems, and static level design to create a fun and satisfying horde-style melee fighting gameplay experience."]}
-                    last={true}
+                        last={true}
                     />
+                </div>
             </div>
-            </div>
-            <span className="hero-spacer"></span>
         </BaseSection>
     )
 }
