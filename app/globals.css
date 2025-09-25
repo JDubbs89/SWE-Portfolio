@@ -308,7 +308,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /* Form Elements */
 
 .contact-form-section {
-    @apply flex flex-col justify-center h-[90vh] mb-10;
+    @apply flex flex-col justify-center h-[clamp(70vh,fit,90vh)] mb-10;
 }
 
 .contact-form-heading {
@@ -353,6 +353,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .alert {
     @apply border border-[rgba(228,83,83,0.2)] bg-gradient-to-br from-[rgba(15,15,20,0.9)] via-[rgba(10,10,10,0.95)] to-[rgba(5,41,158,0.08)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(0.75rem,2vw,1rem)] mb-[clamp(0.75rem,2vw,1rem)] backdrop-blur;
+}
+.alert-good {
+    @apply border border-[rgba(95,228,83,0.2)] bg-gradient-to-br from-[rgba(15,15,20,0.9)] via-[rgba(10,10,10,0.95)] to-[rgba(5,41,158,0.08)] rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(0.75rem,2vw,1rem)] mb-[clamp(0.75rem,2vw,1rem)] backdrop-blur;
 }
 
 .alert-text {

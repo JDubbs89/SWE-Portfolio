@@ -50,9 +50,10 @@ export default function ContactForm(){
         e.currentTarget.reset(); // Reset form
       } else {
         // Fail silently
-        setHasError(false);
+        setHasError(true);
       }
     } catch (error) {
+      //console.log(error);
       // We will just have it fail silently.
       setHasError(false);
     } finally {
@@ -62,30 +63,24 @@ export default function ContactForm(){
 
   return(
     <div id="contact" className="contact-form-section base-section">
+      <div className="content-wrapper-px flex flex-col w-full">
+          <div className={`alert alert-success w-full dt ${hasError ? "opacity-100 translate-x-0" : "-translate-x-100 opacity-0"}`}>
+            Error processing request. Please try again.
+          </div>
+          <div className={`alert-good alert-success dt ${isSuccess ? "opacity-100 translate-x-0" : "-translate-x-100 opacity-0"}`}>
+            Message sent successfully!
+          </div></div>
       <SlideUpElement className="flex flex-start content-wrapper-px w-full">
         <div className="section-title-text">Get in Contact</div>
       </SlideUpElement>
-      
-      
-
-      <SlideUpElement>
-        {hasError && (
-          <div className="alert alert-text w-[57.5%] mx-auto">
-            Error processing request. Please try again.
-          </div>
-        )}
-      
-        {isSuccess && (
-          <div className="alert alert-success w-[57.5%] mx-auto">
-            Message sent successfully!
-          </div>
-        )}
-        <form onSubmit={handleSubmit} className="flex flex-col content-wrapper-px gap-5 h-fit">
-          <input name="name" type="text" placeholder="Name" required className="form-input" />
-          <input name="email" type="email" placeholder="E-mail address" required className="form-input" />
-          <input name="phone" type="tel" placeholder="Phone number (optional)" className="form-input" />
-          <input name="subject" type="text" placeholder="Why are you reaching out?" required className="form-input" />
-          <textarea name="message" placeholder="What would you like to say?" required className="form-textarea" />
+      <SlideUpElement className="content-wrapper-px w-full">
+        
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 h-fit">
+          <input name="name" type="text" placeholder="Name" required className={`form-input ${isPending ? "opacity-0 h-0 m-0 p-0" : "opacity-100"}`}/>
+          <input name="email" type="email" placeholder="E-mail address" required className={`form-input ${isPending ? "opacity-0 h-0 m-0 p-0" : "opacity-100"}`}/>
+          <input name="phone" type="tel" placeholder="Phone number (optional)" className={`form-input ${isPending ? "opacity-0 h-0 m-0 p-0" : "opacity-100"}`}/>
+          <input name="subject" type="text" placeholder="Why are you reaching out?" required className={`form-input ${isPending ? "opacity-0 h-0 m-0 p-0" : "opacity-100"}`}/>
+          <textarea name="message" placeholder="What would you like to say?" required className={`form-textarea ${isPending ? "opacity-0 h-0 m-0 p-0" : "opacity-100"}`}/>
           
           <div className="flex justify-end w-full text-[1rem]">
             <button 

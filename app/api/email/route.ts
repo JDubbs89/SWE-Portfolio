@@ -53,28 +53,37 @@ export async function POST(request: NextRequest) {
       )
     }
     
-    const response = await fetch("https://api.resend.com/emails", {
+    const response = await fetch("https://api.resend.com/emails", {// Notification Email upon message sent.
       method: "POST",
       headers: {
         Authorization: `Bearer ${key}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "contact@jonathanwarnercs.com", // must match your verified domain in Resend
-        to: `${email}`,       // your personal email
-        subject: `New form response from ${data.contactName}: ${data.subject}`,
-        text: `From: ${data.contactEmail}\n\nPhone: ${data.contactPhone}\n\n${data.message}`,
+        from: "contact@jonathanwarnercs.com",
+        to: `${email}`,       
+        subject: `Message from ${data.contactName}`,
+        text: `From: ${data.contactEmail}\nPhone: ${data.contactPhone}\n\n${data.subject}\n\n${data.message}`,
       }),
     });
 
-    // await resend.emails.send({
-    //   from: "contact@jonathanwarnercs.com", // must match your verified domain in Resend
-    //   to: `${email}`,       // your personal email
-    //   subject: `New form response from ${data.contactName}: ${data.subject}`,
-    //   text: `From: ${data.contactEmail}\n\nPhone: ${data.contactPhone}\n\n${data.message}`,
-    // });
-    
-    if (!response.ok) {
+    const firstName:string = data.contactName.split(" ")[0];
+    const response1 = await fetch("https://api.resend.com/emails", {// Thank you email for contact
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "contact@jonathanwarnercs.com",
+        to: `${data.contactEmail}`,       
+        subject: `Thanks for reaching out!`,
+        text: `Hey ${firstName},\n\nThank you for taking the time to send me a message! If you have any more questions regarding myself or my projects, don't hesitate to contact me again!\n\nThank you,\nJonathan Warner`,
+      }),
+    });
+
+
+    if (!response.ok || !response1.ok) {
       const err = await response.text();
       console.error("Resend error:", err);
       return NextResponse.json({ error: "Email send failed" }, { status: 500 });
