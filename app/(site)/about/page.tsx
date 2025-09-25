@@ -6,7 +6,6 @@ import MediaCarousel from "@components/containers/carousel/mediaCarousel/mediaCa
 import EduContainer from "@components/containers/default/eduContainer";
 import PositionContainer from "@/app/_components/containers/default/positionContainer";
 import HobbyBadge from "@components/containers/default/hobbyBadge";
-import Image from "next/image";
 
 export const metadata = {
   title: "About",
@@ -23,7 +22,7 @@ export default function About() {
         </div>
         <div className="summary-section-para my-4">
           Currently, I am working on building out my portfolio with projects like my Grace Church Website Revamp,
-           where I am working with staff and technical administrators to create a fresh new website for my local church. Additionally, I'm expanding my programming 
+           where I am working with staff and technical administrators to create a fresh new website for my local church. Additionally, I&apos;m expanding my programming 
            knowledge base by studying C++ and Go, as well as programming patterns and design architecture to enhance my software development process.
         </div>
         <div className="summary-section-para my-4">
@@ -42,7 +41,7 @@ export default function About() {
           bullets={["GPA: 4.0/4.0","Activities: US Airforce Cyber-Patriots Competition, job shadowing","Skills Learned: Various programming languages, game/project development, teamwork & collaboration, programming design logic"]}
         />
       </SummarySection>
-      
+
       <SummarySection title="Hobbies" className="content-wrapper-px w-full mb-10">
         <div className="flex flex-wrap gap-4 justify-center mt-5">
           <HobbyBadge name="Live Audio" src="mixing.svg"/>

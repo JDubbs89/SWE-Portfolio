@@ -75,7 +75,7 @@ export default function MediaCarouselSection({ mediaItems, autoAdvanceMs = 10000
         clearInterval(intervalRef.current);
       }
     };
-  }, [currentIndex, autoAdvanceMs, isPaused]);
+  }, [currentIndex, startTimer, autoAdvanceMs, isPaused]);
 
   const handleMouseEnter = () => {
     if (pauseOnHover) pauseTimer();
