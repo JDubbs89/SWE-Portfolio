@@ -72,12 +72,16 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json({ success: true, message: 'Email sent successfully' })
     
-  } catch (error: any) {
-    console.error('Email error:', error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+    console.error(error.message);
+    } else {
+    console.error(error);
+    }
     // If error has a message, include it for debugging
-    return NextResponse.json(
-      { error: 'Failed to send message.', details: error?.message || String(error) },
-      { status: 500 }
-    );
+    // return NextResponse.json(
+    //   { error: 'Failed to send message.', details: error?.message || String(error) },
+    //   { status: 500 }
+    // );
   }
 }
