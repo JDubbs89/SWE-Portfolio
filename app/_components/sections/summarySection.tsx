@@ -10,9 +10,9 @@ export default function SummarySection(
       <SlideUpElement opacityM={{ scroll:[0, 0.75, 1],value:[1, 1, 0] }} transformYM={{ scroll:[0, 0.75, 1],value:[0, 0, 100] }} className="flex content-wrapper-px w-full">
         <div className="section-title-text">{title}</div>
       </SlideUpElement>
-      <SlideUpElement opacityM={{ scroll:[0, 0.75, 1],value:[1, 1, 0] }} transformYM={{ scroll:[0, 0.75, 1],value:[0, 0, 100] }}>
+      <div>
         {children}
-      </SlideUpElement>
+      </div>
     </div>
   )
 }

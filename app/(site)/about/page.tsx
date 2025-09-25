@@ -37,8 +37,10 @@ export default function About() {
           degree="CIT Student"
           schoolName="Jackson Area Career Center"
           location="Jackson, MI"
+          startDate="Aug 2022"
           endDate="May 2024"
           bullets={["GPA: 4.0/4.0","Activities: US Airforce Cyber-Patriots Competition, job shadowing","Skills Learned: Various programming languages, game/project development, teamwork & collaboration, programming design logic"]}
+          last={true}
         />
       </SummarySection>
 

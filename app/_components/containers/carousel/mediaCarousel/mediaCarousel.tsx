@@ -86,7 +86,12 @@ export default function MediaCarouselSection({ mediaItems, autoAdvanceMs = 10000
   };
 
   return (
-    <section className="media-carousel-section" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <section className="media-carousel-section flex" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {mediaItems.length > 1 && (
+      <DirectionalButton 
+            direction="left" 
+            onClick={() => indexBy(-1)} 
+          />)}
       <div 
         className="media-carousel-container"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -102,10 +107,10 @@ export default function MediaCarouselSection({ mediaItems, autoAdvanceMs = 10000
       
       {mediaItems.length > 1 && (
         <>
-          <DirectionalButton 
+          {/* <DirectionalButton 
             direction="left" 
             onClick={() => indexBy(-1)} 
-          />
+          /> */}
           <DirectionalButton 
             direction="right" 
             onClick={() => indexBy(1)}

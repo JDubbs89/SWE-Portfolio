@@ -17,7 +17,7 @@ export default function WrkExpSection(){
                     </Link>
                 </div>
                 </SlideUpElement>
-                <div className="timeline-container content-wrapper-px"> {/* col container for containers */}
+                <div className="timeline-container"> {/* col container for containers */}
                     <PositionContainer 
                         positionTitle="Information Technology Intern"
                     startDate="May 2025"
@@ -47,7 +47,7 @@ export default function WrkExpSection(){
                     bullets={["Crafted unique and entertaining projects in a small team of peers, using Python to structure game logic, graphics, and sound to create fully functional games including a 2D-platformer, snake game, and more.",
                         "Architected personal web projects using HTML, CSS, and JavaScript to create interactive and visually appealing sites, including a timer webapp, treasure hunt game, madlibs generator, and more.", 
                         "Developed a singleplayer, third-person game using Unreal Engine 4/5, implementing complex enemy AI, player movement and ability systems, and static level design to create a fun and satisfying horde-style melee fighting gameplay experience."]}
-                        last={true}
+                        last={false}
                     />
                 </div>
             </div>
