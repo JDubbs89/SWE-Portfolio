@@ -831,6 +831,48 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   
 }
 
+/* reverse for left to select */
+@keyframes mediaSwitch {
+    0%{
+        transform: TranslateX(100%);
+    }
+    50%{
+        transform: TranslateZ(-1) TranslateX(0%) rotate(10deg);
+        z-index: -1;
+    }
+    100%{
+        transform: TranslateX(15%) rotate(5deg);
+    }
+}
+
+@keyframes mediaSelect { 
+    0%{
+        transform: TranslateX(100%);
+    }
+    50%{
+        transform: TranslateZ(1) TranslateX(15%) rotate(-10deg);
+        z-index: 0;
+    }
+    100%{
+        transform: TranslateX(0%) rotate(-5deg);
+    }
+}
+
+.mc-l-off {
+    animation: mediaSwitch 0.3s reverse;
+}
+
+.mc-r-off {
+    animation: mediaSwitch 0.3s;
+}
+
+.mc-r-select {
+    animation: mediaSelect 0.3s;
+}
+
+.mc-l-select {
+    animation: mediaSelect 0.3s reverse;
+}
 
 
 @keyframes scrollSkills {

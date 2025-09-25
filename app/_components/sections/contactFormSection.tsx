@@ -36,6 +36,7 @@ export default function ContactForm(){
       message: formData.get("message") as string,
     };
 
+
     try {
       const response = await fetch("/api/email", {
         method: "POST",
@@ -49,13 +50,11 @@ export default function ContactForm(){
         setIsSuccess(true);
         e.currentTarget.reset(); // Reset form
       } else {
-        // Fail silently
+        // Fail loudly for api error
         setHasError(true);
       }
     } catch (error) {
-      //console.log(error);
-      // We will just have it fail silently.
-      setHasError(false);
+      // Fail silently for ts errors in here
     } finally {
       setIsPending(false);
     }
