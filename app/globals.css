@@ -111,6 +111,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply text-[clamp(1.5rem,5vw,2.25rem)] font-bold text-[#f5f5f5] mb-[clamp(1rem,3vw,1.5rem)] leading-snug;
 }
 
+.-section-title-lg {
+    @apply text-[clamp(1.75rem,6vw,2.5rem)] font-bold text-[#f5f5f5] mb-[clamp(1rem,3vw,1.5rem)] leading-snug;
+}
+
 .sub-header {
     @apply text-[clamp(1.125rem,3vw,1.5rem)] font-semibold text-[#d0d0d2] mb-[clamp(0.75rem,2vw,1rem)] leading-relaxed;
 }
@@ -125,6 +129,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .accent-text {
     @apply text-[#8ba3f0] font-medium;
+}
+
+.position-date-font {
+    @apply text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 my-2 whitespace-nowrap ml-auto mr-4;
 }
 
 /* Card Components */
@@ -207,6 +215,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 @media (max-width: 1120px) {
+    .position-date-font {
+        @apply mr-auto ml-0 mt-1;
+    }
     .bio-section {
         @apply h-fit mb-20;
     }
@@ -653,6 +664,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 @media (max-width: 1120px) {
+    .position-card-title{
+        @apply mb-0 mr-4;
+    }
+    .position-card-org-title {
+        @apply ml-0;
+    }
+    .position-card{
+        @apply py-2 px-3;
+    }
     .position-card-bullet-list{
         @apply h-auto -translate-y-full m-0 p-0 overflow-clip;
     }
@@ -743,7 +763,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .media-carousel-section {
-  @apply relative my-5 mx-auto w-[40vw] h-[60vh] bg-white rounded-2xl overflow-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300;
+  @apply my-5 mx-auto w-[60vw] h-[50vw] bg-white rounded-2xl overflow-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300;
 }
 
 .media-carousel-section:hover {
@@ -751,23 +771,23 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .media-carousel-container {
-  @apply flex transition-transform duration-500 ease-in-out mx-auto w-full h-full border border-[rgba(83,134,228,0.2)];
+  @apply flex transition-transform duration-500 ease-in-out mx-auto my-auto w-full h-full border border-[rgba(83,134,228,0.0)];
 }
 
 .media-carousel-slide {
-  @apply flex-shrink-0 w-full h-full mx-auto;
+  @apply flex-shrink-0 w-full h-full mx-auto my-auto py-10;
 }
 
 .directional-button {
-  @apply absolute top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white p-1 rounded-full hover:bg-black/70 transition-all duration-200 flex items-center justify-center;
+  @apply relative top-1/2 h-min -translate-y-1/2 z-10 bg-black/50 text-white p-1 rounded-full hover:bg-black/70 transition-all duration-200 flex items-center justify-center;
 }
 
 .directional-button-left {
-  @apply left-4;
+  @apply left-0 mx-auto;
 }
 
 .directional-button-right {
-  @apply right-4;
+  @apply right-0 mx-auto
 }
 
 .hobby-card {
