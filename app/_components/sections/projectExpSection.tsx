@@ -1,5 +1,6 @@
 "use client"
 import BaseSection from "./baseSection";
+import { get_projects, has_any_flags } from "@/app/_lib/functions/projects";
 import ProjectContainer from "@components/containers/default/projectContainer";
 import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
@@ -18,7 +19,21 @@ export default function ProjectExpSection(){
                 </div>
                 </SlideUpElement>
                 <div className="timeline-container content-wrapper-px"> {/* col container for containers */}
-                    <ProjectContainer
+                    {get_projects().map((project) => (has_any_flags(project,["underConstruction"]) ? // Maps projects to project containers if they aren't under construction
+                        null :
+                        <ProjectContainer
+                        key={project.id}
+                        projectTitle={project.id}
+                        projectType={project.projectType}
+                        techStack={project.techStack}
+                        imageUrl={project.imageUrl}
+                        interactUrl={project.interactUrl}
+                        interactText={project.interactText}
+                        projectId={project.id}
+                        bullets={project.bullets}
+                    />
+                    ))}
+                    {/* <ProjectContainer
                         projectTitle="Community Minecraft Server"
                         projectType="Oracle Cloud Server Instance"
                         techStack="Oracle, Docker, Pterodactyl Panel, Nginx, MariaDB"
@@ -39,7 +54,7 @@ export default function ProjectExpSection(){
                             "Built scalable backend infrastructure by containerizing the FastAPI service with Docker as well as a PostgreSQL database, allowing for dynamic data storage and swift deployment.", 
                             "Implemented JWT-based authentication and authorization in conjunction with OAuth2 for simple and secure user login functionality, preventing unauthorized access to sensitive information."]}
                     />
-                    {/* <ProjectContainer 
+                    <ProjectContainer 
                         projectTitle="Grace Church Website Revamp (Under Construction)"
                         projectType="Website"
                         techStack="Next.js, Typescript, TailwindCSS"

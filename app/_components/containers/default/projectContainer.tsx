@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProjectButton from "@components/buttons/projectButton";
 import Overlay from "@components/containers/default/overlayContainer";
 import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
@@ -22,7 +23,7 @@ export default function ProjectContainer(
         bullets = ["Spearheaded complicated project involving keywords, buzzwords, and skills for a 76% increase in productivity, usefulness, and things getting done, by increasing the number of things done per hour to over 6."], 
         imageUrl = "/assets/images/homepage.png", interactUrl = "", interactText= "View on Github", projectId = "", last = false, reverse = false
     }: ContainerProps
-){
+){ 
     return (
         <SlideUpElement>
         <div className={`project-timeline-container animate-slideup`}>
@@ -31,7 +32,7 @@ export default function ProjectContainer(
                 <Image src={imageUrl} alt={`${projectTitle} thumbnail`} width={1600} height={900} className={`project-card-image ${last ? "mb-10" : ""}`}/>
                 <div className="project-link-container">
                   {interactUrl != "" ? <Link href={interactUrl} className="primary-button cursor-pointer whitespace-nowrap project-link">{interactText}</Link> : null}
-                  {projectId != "" ? <Link href={`projects/${projectId}`} className="primary-button cursor-pointer whitespace-nowrap project-link">Learn More</Link> : null}
+                  {projectId != "" ? <ProjectButton interactUrl={`projects/${projectId}`} interactText="Learn More" embedBackData className="primary-button cursor-pointer whitespace-nowrap project-link"/> : null}
                 </div>
               </Overlay>
             <div className="m-4">
