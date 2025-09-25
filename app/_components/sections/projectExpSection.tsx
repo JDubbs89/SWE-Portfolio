@@ -1,20 +1,24 @@
+"use client"
 import BaseSection from "./baseSection";
 import ProjectContainer from "@components/containers/default/projectContainer";
+import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function ProjectExpSection(){
     return(
-        <BaseSection className="project-section base-section">
+        <BaseSection className="project-section base-section animate-slideup">
             <div className="content-wrapper mb-10 h-full">
+                <SlideUpElement>
                 <div className="flex justify-between w-full flex-wrap">
                     <div className="section-title-text">Featured Projects</div>
                     <Link href={"projects"} className="ghost-button my-auto text-[clamp(0.6rem,1rem,1rem)] whitespace-nowrap font-normal">
                         View More
                     </Link>
                 </div>
+                </SlideUpElement>
                 <div className="timeline-container content-wrapper-px"> {/* col container for containers */}
-                    <ProjectContainer 
+                    <ProjectContainer
                         projectTitle="Community Minecraft Server"
                         projectType="Oracle Cloud Server Instance"
                         techStack="Oracle, Docker, Pterodactyl Panel, Nginx, MariaDB"
@@ -35,7 +39,7 @@ export default function ProjectExpSection(){
                             "Built scalable backend infrastructure by containerizing the FastAPI service with Docker as well as a PostgreSQL database, allowing for dynamic data storage and swift deployment.", 
                             "Implemented JWT-based authentication and authorization in conjunction with OAuth2 for simple and secure user login functionality, preventing unauthorized access to sensitive information."]}
                     />
-                    <ProjectContainer 
+                    {/* <ProjectContainer 
                         projectTitle="Grace Church Website Revamp (Under Construction)"
                         projectType="Website"
                         techStack="Next.js, Typescript, TailwindCSS"
@@ -45,7 +49,7 @@ export default function ProjectExpSection(){
                         bullets={["Designing and building a modern responsive webpage as a redesign of the current Grace Church official website, improving readability and user experience, as well as better organizing church information.",
                             "Using Next.js, Typescript, and TailwindCSS to develop a robust and performant site framework utilizing best practices to ensure a strong and maintainable project structure.", 
                             "Working with members of Grace Church to ensure that the website aligns with user needs, collaborating with current website management team to ensure smooth project integration as well as compliance with church standards."]}
-                    />
+                    /> */}
                 </div>
             </div>
         </BaseSection>

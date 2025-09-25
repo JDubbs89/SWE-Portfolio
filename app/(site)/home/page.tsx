@@ -5,6 +5,7 @@ import BioSection from "@components/sections/bioSection";
 import SkillSection from "@components/sections/skillSection";
 import WrkExpSection from "@components/sections/workExpSection";
 import ProjectExpSection from "@components/sections/projectExpSection";
+import ContactFormSection from "@components/sections/contactFormSection";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -17,6 +18,7 @@ export default function Home() {
       <WrkExpSection/>
       <SkillSection/>
       <ProjectExpSection/>
+      {/* <ContactFormSection/> */}
       
     </div>
   )

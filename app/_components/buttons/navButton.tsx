@@ -13,7 +13,6 @@ export default function NavButton(
 ){
     const pathname = usePathname();
     const isActive = (pathname === props.href);
-
     return (
         <Link href={props.href} className={`default-nav-button td ${isActive ? "default-nav-button-active" : ""} ${props.extra_styles}`}>
             {props.name}

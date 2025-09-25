@@ -1,6 +1,6 @@
 import BaseSection from "@/app/_components/sections/baseSection";
-import Link from "next/link";
 import ProjectContainer from "@components/containers/default/projectContainer";
+import SlideUpElement from "@components/containers/default/slideUpElement";
 
 export const metadata = {
   title: "Projects",
@@ -10,9 +10,11 @@ export default function Projects() {
   return (
     <BaseSection className="project-section base-section">
             <div className="content-wrapper mb-10 h-full">
+                <SlideUpElement>
                 <div className="flex justify-between w-full flex-wrap">
                     <div className="section-title-text">My Projects</div>
                 </div>
+                </SlideUpElement>
                 <div className="timeline-container content-wrapper-px"> {/* col container for containers */}
                     <ProjectContainer 
                         projectTitle="Community Minecraft Server"

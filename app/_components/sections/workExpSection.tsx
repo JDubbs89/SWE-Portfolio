@@ -1,5 +1,6 @@
 import BaseSection from "./baseSection";
 import PositionContainer from "@components/containers/default/positionContainer";
+import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,12 +9,14 @@ export default function WrkExpSection(){
         <BaseSection className="work-section base-section">
             
             <div className="content-wrapper h-fit">
+                <SlideUpElement>
                 <div className="flex justify-between w-full flex-wrap">
                     <div className="section-title-text">My Journey</div>
                     <Link href={"about"} className="ghost-button my-auto text-[clamp(0.6rem,1rem,1rem)] whitespace-nowrap font-normal">
                         Learn More
                     </Link>
                 </div>
+                </SlideUpElement>
                 <div className="timeline-container content-wrapper-px"> {/* col container for containers */}
                     <PositionContainer 
                         positionTitle="Information Technology Intern"

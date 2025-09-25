@@ -13,18 +13,19 @@ export default function SideNavContainer(
         {name: "Home", href: "/home"},
         {name: "About", href: "/about"},
         {name: "Projects", href: "/projects"},
-        {name: "Blog", href: "/blog"},
+        // {name: "Blog", href: "/blog"},
         {name: "Contact", href: "/contact"}
     ]
-
+  const Leave = () => {onMouseLeave()};
      return(
-      <div onMouseLeave={() => onMouseLeave()} className={`nav-bar-vertical transition-all duration-300 ${collapsed ? "translate-x-full pointer-events-none" : "translate-x-0"}`}>
+      <div onMouseLeave={() => onMouseLeave()} className={`nav-bar-vertical transition-all duration-300 ${collapsed ? "translate-x-full w-[10vw] pointer-events-none" : "translate-x-0"}`}>
         {navLinks.map((link) => (
-          <NavButton key={link.name} 
+          <NavButton key={link.name}
           props={{ 
             name: link.name, 
             href: link.href, 
-            extra_styles: `w-full ${(pathname == link.name) ? "pointer-events-none border-gray-100" : "border-gray-100" }` }} />
+            extra_styles: `w-full ${(pathname == link.name) ? "pointer-events-none border-gray-100" : "border-gray-100" }`
+          }} />
         ))}
       </div>
     )

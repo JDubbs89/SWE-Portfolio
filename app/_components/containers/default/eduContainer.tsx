@@ -3,23 +3,23 @@ import SlideUpElement from "@components/containers/default/slideUpElement";
 type ContainerProps = {
     startDate?: string;
     endDate?: string;
-    positionTitle?: string;
-    companyName?: string;
+    degree?: string;
+    schoolName?: string;
     location?: string;
     bullets?: string[];
     last?: boolean;
 }
 
-export default function PositionContainer(
-    { startDate = "May 2025", endDate = "Present", positionTitle = "Senior Thing Doer", companyName = "Company Inc", location = "Jackson, MI", 
-        bullets = ["Spearheaded complicated project involving keywords, buzzwords, and skills for a 76% increase in productivity, usefulness, and things getting done, by increasing the number of things done per hour to over 6."], 
+export default function EduContainer(
+    { startDate = "Aug 2024", endDate = "May 2028", degree = "Bachelor of Science in Computer Science", schoolName = "Trine University", location = "Angola, IN", 
+        bullets = ["Minor: Cybersecurity","GPA: 4.0/4.0 - 2x Trine President's List Awardee","Activities: Computer Science Society (CSS), Christian Campus House (CCH)"],
         last = false
     }: ContainerProps
 ){
     return (
-        <SlideUpElement>
-        <div className="position-timeline-container">
-            <div className="flex flex-col gap-0 w-5"> {/* Timeline Spans/Dates */}
+        <SlideUpElement className="">
+        <div className="flex flex-row my-0 py-0 h-full w-full">
+            <div className="flex flex-col gap-0 w-5">
                 <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{endDate}</div>
                 <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-400"></span>
                 <span className="rounded-full h-5 w-2 ml-3.25 bg-white"></span>
@@ -28,12 +28,12 @@ export default function PositionContainer(
             </div>
             
             <div className={`position-card ${last ? "mb-10" : ""}`}>
-                <div className="position-card-title">{positionTitle}</div>
-                <div className="position-card-org-title">{companyName} • {location}</div>
+                <div className="position-card-title">{degree}</div>
+                <div className="position-card-org-title">{schoolName} • {location}</div>
                     <div className="position-card-bullet-list">
                         {bullets.map((bullet, index) => (
                             <div key={index} className="position-card-bullet">
-                                • {bullet}
+                              {bullet}
                             </div>
                         ))}
                     </div>

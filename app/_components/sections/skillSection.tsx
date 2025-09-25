@@ -1,5 +1,5 @@
 import SkillCarousel from "@components/containers/carousel/skillCarousel";
-import ParagraphContainer from "@components/text/paragraphContainer";
+import SlideUpElement from "@components/containers/default/slideUpElement";
 
 export default function SkillSection() {
     const skillCategories = [
@@ -38,11 +38,13 @@ export default function SkillSection() {
         }
     ];
         return (
+        <SlideUpElement>
         <section id="skills" className="skill-section base-section">
             <div className="content-wrapper">
                 <div className="section-title-text">Technologies</div>      
                 <SkillCarousel categories={skillCategories}/>
             </div>
         </section>
+        </SlideUpElement>
     )
 }

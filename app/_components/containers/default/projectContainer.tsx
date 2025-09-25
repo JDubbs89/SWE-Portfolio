@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Overlay from "@components/containers/default/overlayContainer";
+import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
 
 type ContainerProps = {
@@ -23,13 +24,14 @@ export default function ProjectContainer(
     }: ContainerProps
 ){
     return (
-        <div className={`project-timeline-container`}>
+        <SlideUpElement>
+        <div className={`project-timeline-container animate-slideup`}>
             <div className="project-card">
               <Overlay className="overlay">
                 <Image src={imageUrl} alt={`${projectTitle} thumbnail`} width={1600} height={900} className={`project-card-image ${last ? "mb-10" : ""}`}/>
-                <div className="flex flex-row justify-center gap-2 absolute top-[30%] left-[50%] -translate-x-[50%]">
-                  {interactUrl != "" ? <Link href={interactUrl} className="project-link primary-button cursor-pointer">{interactText}</Link> : null}
-                  {projectId != "" ? <Link href={projectId} className="project-link primary-button cursor-pointer">Learn More</Link> : null}
+                <div className="project-link-container">
+                  {interactUrl != "" ? <Link href={interactUrl} className="primary-button cursor-pointer whitespace-nowrap project-link">{interactText}</Link> : null}
+                  {projectId != "" ? <Link href={`projects/${projectId}`} className="primary-button cursor-pointer whitespace-nowrap project-link">Learn More</Link> : null}
                 </div>
               </Overlay>
             <div className="m-4">
@@ -45,5 +47,6 @@ export default function ProjectContainer(
             </div>
             </div>
         </div> 
+        </SlideUpElement>
     )
 }
