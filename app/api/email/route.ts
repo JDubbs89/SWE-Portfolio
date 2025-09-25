@@ -79,9 +79,9 @@ export async function POST(request: NextRequest) {
     console.error(error);
     }
     // If error has a message, include it for debugging
-    // return NextResponse.json(
-    //   { error: 'Failed to send message.', details: error?.message || String(error) },
-    //   { status: 500 }
-    // );
+    return NextResponse.json(
+      { error: 'Failed to send message.', details: String(error) },
+      { status: 500 }
+    );
   }
 }
