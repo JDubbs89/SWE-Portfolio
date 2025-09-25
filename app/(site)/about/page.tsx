@@ -17,7 +17,7 @@ export default function About() {
     <SlideUpElement className="content-wrapper about-container" opacityM={{ scroll:[1],value:[1] }} transformYM={{ scroll:[1],value:[0] }}>
       <SummarySection className="timeline-container content-wrapper-px w-full mb-10">
         <div className="summary-section-para my-4">
-          I'm a CS student specializing in software development with hands-on experience building production-level microservices and cloud server deployments.
+          I&apos;m a CS student specializing in software development with hands-on experience building production-level microservices and cloud server deployments.
           Pursuing a minor in Cybersecurity, I pay close attention to application security and am an advocate of thorough testing practices.
         </div>
         <div className="summary-section-para my-4">
