@@ -1,7 +1,9 @@
 // app/api/contact/route.ts
 import { NextRequest, NextResponse } from 'next/server'
-import { transporter, mailOptions } from '@/app/_lib/mailer'
 import { checkRateLimit } from '@/app/_lib/limiter'
+
+const email = process.env.EMAIL;
+const key = process.env.API_KEY;
 
 export const runtime = "edge"; // to make cloudflare happy
 
@@ -12,6 +14,9 @@ export type ContactData = {
   subject: string;
   message: string;
 }
+
+
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -48,30 +53,33 @@ export async function POST(request: NextRequest) {
       )
     }
     
-    const emailBody = `
-      <h3>New Contact Form Submission</h3>
-      <p><strong>Name:</strong> ${data.contactName}</p>
-      <p><strong>Email:</strong> ${data.contactEmail}</p>
-      ${data.contactPhone ? `<p><strong>Phone:</strong> ${data.contactPhone}</p>` : ''}
-      <p><strong>Subject:</strong> ${data.subject}</p>
-      <p><strong>Message:</strong></p>
-      <p>${data.message.replace(/\n/g, '<br>')}</p>
-    `
-    
-    await transporter.sendMail({
-      ...mailOptions,
-      subject: `Contact Form: ${data.subject}`,
-      text: `
-        Name: ${data.contactName}
-        Email: ${data.contactEmail}
-        ${data.contactPhone ? `Phone: ${data.contactPhone}` : ''}
-        Subject: ${data.subject}
-        Message: ${data.message}
-      `,
-      html: emailBody,
-      replyTo: data.contactEmail,
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "contact@jonathanwarnercs.com", // must match your verified domain in Resend
+        to: `${email}`,       // your personal email
+        subject: `New form response from ${data.contactName}: ${data.subject}`,
+        text: `From: ${data.contactEmail}\n\nPhone: ${data.contactPhone}\n\n${data.message}`,
+      }),
     });
+
+    // await resend.emails.send({
+    //   from: "contact@jonathanwarnercs.com", // must match your verified domain in Resend
+    //   to: `${email}`,       // your personal email
+    //   subject: `New form response from ${data.contactName}: ${data.subject}`,
+    //   text: `From: ${data.contactEmail}\n\nPhone: ${data.contactPhone}\n\n${data.message}`,
+    // });
     
+    if (!response.ok) {
+      const err = await response.text();
+      console.error("Resend error:", err);
+      return NextResponse.json({ error: "Email send failed" }, { status: 500 });
+    }
+
     return NextResponse.json({ success: true, message: 'Email sent successfully' })
     
   } catch (error: unknown) {

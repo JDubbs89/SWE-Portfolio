@@ -1,7 +1,7 @@
 // app/_lib/rateLimiter.ts
 const requestCounts = new Map<string, { count: number; resetTime: number }>()
 
-export function checkRateLimit(ip: string, maxRequests = 10, windowMs = 15 * 60 * 1000) {
+export function checkRateLimit(ip: string, maxRequests = 3, windowMs = 15 * 60 * 1000) {
   const now = Date.now()
   const record = requestCounts.get(ip)
   
