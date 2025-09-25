@@ -782,7 +782,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply h-fit -mt-30;
 }
 
+.mobile-only {
+    @apply opacity-0 transition-all duration-300;
+}
+
 @media (max-width: 1120px) {
+    .mobile-only {
+        @apply opacity-100;
+    }
+
     .about-container {
         @apply -mt-40;
     }
@@ -799,6 +807,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
   
 }
+
+
 
 @keyframes scrollSkills {
   from {

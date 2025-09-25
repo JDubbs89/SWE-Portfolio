@@ -26,8 +26,8 @@ export default function ProfileContainer(
             <p className={`profile-name whitespace-nowrap ${collapsed ? "mr-6" : "mr-2"} dt`}>{name}</p>
             <p className={`dt mb-2 mt-auto profile-bio overflow-x-clip ${collapsed ? "opacity-0 z-0 -translate-x-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0" : "max-h-40 opacity-100"}`}>{jobTitle}</p>
             </div>
-            <div className={`dt overflow-x-clip ${collapsed ? "opacity-0 z-0 -translate-x-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0" : "max-h-40 opacity-100"}`}>
-              <SocialsContainer/>
+            <div className={`dt overflow-x-clip ${collapsed ? "opacity-0 -translate-x-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0 pointer-events-none -z-10" : "max-h-40 opacity-100"}`}>
+              <SocialsContainer className={`${collapsed ? "pointer-events-none -z-10" : ""}`}/>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function ProfileContainer(
 
           <div className={`m-profile-info dt ${collapsed ? "flex-row items-start" : "flex-col"}`}>
             <div className={`dt ${collapsed ? "opacity-0 -translate-y-full font-stretch-condensed whitespace-nowrap max-w-0 max-h-0" : "opacity-100 mt-2"}`}>
-              <SocialsContainer/>
+              <SocialsContainer className={`${collapsed ? "pointer-events-none" : ""}`}/>
             </div>
           </div>
         </div>

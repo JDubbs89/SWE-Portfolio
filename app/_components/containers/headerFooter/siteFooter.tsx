@@ -5,6 +5,9 @@ export default function SiteFooter(){
                 <p className="default-footer-text">
                     @2025 Jonathan Warner, Software Engineer. All rights reserved.
                 </p>
+                <p className="default-footer-text mobile-only">
+                    Images and embeds may appear smaller than intended on mobile.
+                </p>
             </div>
         </footer>
     )
