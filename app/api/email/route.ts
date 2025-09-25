@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { transporter, mailOptions } from '@/app/_lib/mailer'
 import { checkRateLimit } from '@/app/_lib/limiter'
 
+export const runtime = "edge"; // to make cloudflare happy
+
 export type ContactData = {
   contactName: string;
   contactEmail: string;
