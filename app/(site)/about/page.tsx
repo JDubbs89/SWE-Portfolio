@@ -13,8 +13,8 @@ export const metadata = {
 
 export default function About() {
   return (
-    <BaseSection className="work-section gap-5 backdrop-blur">
-    <SlideUpElement className="content-wrapper about-container" opacityM={{ scroll:[1],value:[1] }} transformYM={{ scroll:[1],value:[0] }}>
+    <BaseSection className="flex flex-col gap-5">
+    <SlideUpElement className="" opacityM={{ scroll:[1],value:[1] }} transformYM={{ scroll:[1],value:[0] }}>
       <SummarySection className="timeline-container content-wrapper-px w-full mb-10">
         <div className="summary-section-para my-4">
           I&apos;m a CS student specializing in software development with hands-on experience building production-level microservices and cloud server deployments.

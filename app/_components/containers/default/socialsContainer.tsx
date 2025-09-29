@@ -4,7 +4,7 @@ type props = {
   className?:string;
 }
 
-export default function SocialsContainer({ className = "" }: props) {
+export default function SocialsContainer({ className = ""}: props) {
   return (
     <div className="flex justify-start">
       <div className="flex gap-1">

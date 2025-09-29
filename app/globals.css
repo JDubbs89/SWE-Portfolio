@@ -421,6 +421,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .content-wrapper {
         @apply px-0 mx-0 block justify-center;
     }
+
+    .content-wrapper-px {
+        @apply max-w-[100vw];
+    }
     
     .base-section {
         @apply mx-4;
@@ -468,7 +472,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .m-profile-info{
-    @apply flex flex-col mt-0 pointer-events-auto transition-all duration-300;
+    @apply flex flex-col mt-0 opacity-0 pointer-events-none transition-all duration-300;
 }
 
 .profile-image {
@@ -482,7 +486,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 @media (max-width: 1120px) {
     .section-title-text {
-        @apply text-[9vw];
+        @apply text-[clamp(1.25rem,3rem,3rem)];
     }
     .profile {
         @apply w-full;
@@ -492,6 +496,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     }
     .dt-profile-container {
         @apply opacity-0 pointer-events-none absolute h-0 w-0 border-0;
+    }
+    .m-profile-info{
+        @apply flex flex-col mt-0 opacity-100 pointer-events-auto transition-all duration-300;
     }
     .m-profile-container {
         @apply opacity-100 w-full;
@@ -633,7 +640,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .work-section {
-    @apply flex h-fit mb-10;
+    @apply flex h-fit mb-10 justify-center;
 }
 .timeline-container {
     @apply flex flex-col w-full h-full mt-5 justify-between;
@@ -667,6 +674,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 @media (max-width: 1120px) {
+    
     .position-card-title{
         @apply mb-0 mr-4;
     }
@@ -799,7 +807,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .media-carousel-section {
-  @apply my-5 mx-auto w-[60vw] h-[50vw] bg-white rounded-2xl overflow-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300;
+  @apply my-5 mx-auto w-[90vh] h-[60vh] bg-white rounded-2xl overflow-x-hidden border border-[rgba(83,134,228,0.2)] transition-all duration-300;
 }
 
 .media-carousel-section:hover {
@@ -807,11 +815,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .media-carousel-container {
-  @apply flex transition-transform duration-500 ease-in-out mx-auto my-auto w-full h-full border border-[rgba(83,134,228,0.0)];
+  @apply flex transition-transform duration-500 ease-in-out overflow-x-hidden mx-auto my-auto w-full h-full border border-[rgba(83,134,228,0.0)];
 }
 
 .media-carousel-slide {
-  @apply flex-shrink-0 w-full h-full mx-auto my-auto py-10;
+  @apply flex-shrink-0 w-full h-full mx-auto my-auto;
 }
 
 .directional-button {
@@ -819,11 +827,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .directional-button-left {
-  @apply left-0 mx-auto;
+  @apply left-1 mx-auto;
 }
 
 .directional-button-right {
-  @apply right-0 mx-auto
+  @apply right-1 mx-auto
 }
 
 .hobby-card {
@@ -851,7 +859,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         @apply -mt-40;
     }
   .media-carousel-section{
-    @apply w-[clamp(1.8rem,36vh,180rem)] h-[clamp(.9rem,18vh,90rem)];
+    @apply w-[75vw] h-[50vw];
   }
   
   .directional-button-left {
