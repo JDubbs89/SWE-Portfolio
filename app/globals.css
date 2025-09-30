@@ -775,7 +775,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .summary-section-para {
-    @apply text-[2.25vh] max-w-full mx-auto;
+    @apply text-[2.25vh] max-w-full mx-auto px-4;
 }
 
 @media (max-width: 1120px) {
@@ -815,7 +815,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .media-carousel-container {
-  @apply flex transition-transform duration-500 ease-in-out overflow-x-hidden mx-auto my-auto w-full h-full border border-[rgba(83,134,228,0.0)];
+  @apply flex transition-transform duration-500 ease-in-out mx-auto my-auto w-full h-full border border-[rgba(83,134,228,0.0)];
 }
 
 .media-carousel-slide {
