@@ -7,7 +7,7 @@ export default function SocialButton(
     const url = `/assets/icons/${props.name.toLowerCase()}.svg`;
     console.log(url);
     return (!props.dl ?
-        <Link href={props.href} className = {`default-nav-button flex ${props.extra_styles}`}>
+        <a href={props.href} className = {`default-nav-button flex ${props.extra_styles}`} target="_blank" rel="noopener noreferrer">
             <img className={`${props.name.toLowerCase()}`} style={{
                     backgroundColor: 'currentColor',                  // color of the icon
                     maskImage: `url(${url})`,
@@ -25,7 +25,7 @@ export default function SocialButton(
                     marginBottom: 'auto'
                 } as React.CSSProperties} />
             <p className="my-auto social-button-text">{props.name}</p>
-        </Link>
+        </a>
         :
         <a href={props.href} className = {`default-nav-button flex ${props.extra_styles}`} download>
             <img className={`${props.name.toLowerCase()}`} style={{
