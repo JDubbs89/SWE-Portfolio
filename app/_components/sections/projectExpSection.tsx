@@ -4,7 +4,7 @@ import { get_projects, has_any_flags } from "@/app/_lib/functions/projects";
 import ProjectContainer from "@components/containers/default/projectContainer";
 import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 
 export default function ProjectExpSection(){
     return(

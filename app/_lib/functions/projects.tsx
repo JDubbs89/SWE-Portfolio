@@ -96,7 +96,7 @@ export function get_projects(): ProjectData[] {
 }
 
 export function get_tagname(flag:string): string {
-  var name:string | undefined = flagNames.get(flag);
+  let name:string | undefined = flagNames.get(flag);
   if (name) {
     return name;
   }

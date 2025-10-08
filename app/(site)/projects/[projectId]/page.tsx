@@ -1,4 +1,4 @@
-import { get_project, has_any_flags, get_tagname } from "@/app/_lib/functions/projects";
+import { get_project, get_tagname } from "@/app/_lib/functions/projects";
 import BackButton from "@components/buttons/backButton";
 import Link from "next/link";
 import SummarySection from "@components/sections/summarySection";

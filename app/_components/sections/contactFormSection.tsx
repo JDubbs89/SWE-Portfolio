@@ -45,7 +45,9 @@ export default function ContactForm(){
       });
 
       const result = await response.json();
-      
+      if (result){
+        console.log("Hello investigator!");
+      }
       if (response.ok) {
         setIsSuccess(true);
         e.currentTarget.reset(); // Reset form
@@ -53,8 +55,8 @@ export default function ContactForm(){
         // Fail loudly for api error
         setHasError(true);
       }
-    } catch (error) {
-      // Fail silently for ts errors in here
+    // } catch (error) {
+    // Fail silently for ts errors in here
     } finally {
       setIsPending(false);
     }

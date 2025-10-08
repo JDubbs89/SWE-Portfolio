@@ -2,7 +2,7 @@ import BaseSection from "./baseSection";
 import PositionContainer from "@components/containers/default/positionContainer";
 import SlideUpElement from "@components/containers/default/slideUpElement";
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 
 export default function WrkExpSection(){
     return(

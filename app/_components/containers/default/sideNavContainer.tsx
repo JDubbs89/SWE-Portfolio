@@ -16,7 +16,6 @@ export default function SideNavContainer(
         // {name: "Blog", href: "/blog"},
         {name: "Contact", href: "/contact"}
     ]
-  const Leave = () => {onMouseLeave()};
      return(
       <div onMouseLeave={() => onMouseLeave()} className={`nav-bar-vertical transition-all duration-300 ${collapsed ? "translate-x-full w-[10vw] pointer-events-none" : "translate-x-0"}`}>
         {navLinks.map((link) => (

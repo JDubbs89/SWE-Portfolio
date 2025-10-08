@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SlideUpElement from "./slideUpElement";
-import { img } from "framer-motion/client";
+//import { img } from "framer-motion/client";
 
 type BadgeProps = {
   name: string;

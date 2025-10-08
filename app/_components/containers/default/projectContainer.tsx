@@ -27,10 +27,10 @@ export default function ProjectContainer(
     return (
         <SlideUpElement>
         <div className={`project-timeline-container animate-slideup`}>
-            <div className="project-card">
+            <div className="project-card" id = {creationDate}>
               <Overlay className="overlay">
                 <Image src={imageUrl} alt={`${projectTitle} thumbnail`} width={1600} height={900} className={`project-card-image ${last ? "mb-10" : ""}`}/>
-                <div className="project-link-container">
+                <div className="project-link-container" id = {(reverse ? "reversed":"not_reversed")}>
                   {interactUrl != "" ? <Link href={interactUrl} className="primary-button cursor-pointer whitespace-nowrap project-link">{interactText}</Link> : null}
                   {projectId != "" ? <ProjectButton interactUrl={`projects/${projectId}`} interactText="Learn More" embedBackData className="primary-button cursor-pointer whitespace-nowrap project-link"/> : null}
                 </div>

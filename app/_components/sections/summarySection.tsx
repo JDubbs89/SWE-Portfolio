@@ -1,5 +1,5 @@
 import SlideUpElement from "@components/containers/default/slideUpElement";
-import BaseSection from "@components/sections/baseSection";
+//import BaseSection from "@components/sections/baseSection";
 
 
 export default function SummarySection(
