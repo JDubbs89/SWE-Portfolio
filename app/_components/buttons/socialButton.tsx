@@ -8,7 +8,7 @@ export default function SocialButton(
     console.log(url);
     return (!props.dl ?
         <a href={props.href} className = {`default-nav-button flex ${props.extra_styles}`} target="_blank" rel="noopener noreferrer">
-            <img alt="Social Button Image" className={`${props.name.toLowerCase()}`} style={{
+            <img className={`${props.name.toLowerCase()}`} style={{
                     backgroundColor: 'currentColor',                  // color of the icon
                     maskImage: `url(${url})`,
                     WebkitMaskImage: `url(${url})`,
@@ -28,7 +28,7 @@ export default function SocialButton(
         </a>
         :
         <a href={props.href} className = {`default-nav-button flex ${props.extra_styles}`} download>
-            <img alt="Social Button Image" className={`${props.name.toLowerCase()}`} style={{
+            <img className={`${props.name.toLowerCase()}`} style={{
                     backgroundColor: 'currentColor',                  // color of the icon
                     maskImage: `url(${url})`,
                     WebkitMaskImage: `url(${url})`,
