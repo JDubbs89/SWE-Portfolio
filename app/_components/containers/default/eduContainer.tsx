@@ -11,7 +11,7 @@ type ContainerProps = {
 }
 
 export default function EduContainer(
-    { startDate = "Aug 2024", endDate = "May 2028", degree = "Bachelor of Science in Computer Science", schoolName = "Trine University", location = "Angola, IN", 
+    { startDate = "Aug 2024", endDate = "May 2028", degree = "Bachelor of Science in Computer Science", schoolName = "Trine University", location = "Indiana, USA", 
         bullets = ["Minor: Cybersecurity","GPA: 4.0/4.0 - 2x Trine President's List Awardee","Activities: Computer Science Society (CSS), Christian Campus House (CCH)"],
         last = false
     }: ContainerProps

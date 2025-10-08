@@ -11,7 +11,7 @@ type ContainerProps = {
 }
 
 export default function PositionContainer(
-    { startDate = "May 2025", endDate = "Present", positionTitle = "Senior Thing Doer", companyName = "Company Inc", location = "Jackson, MI", 
+    { startDate = "May 2025", endDate = "Present", positionTitle = "Senior Thing Doer", companyName = "Company Inc", location = "Michigan, USA", 
         bullets = ["Spearheaded complicated project involving keywords, buzzwords, and skills for a 76% increase in productivity, usefulness, and things getting done, by increasing the number of things done per hour to over 6."], 
         last = false
     }: ContainerProps

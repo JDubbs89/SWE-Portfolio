@@ -35,8 +35,8 @@ export default function About() {
         <EduContainer/>
         <EduContainer
           degree="CIT Student"
-          schoolName="Jackson Area Career Center"
-          location="Jackson, MI"
+          schoolName="JACC"
+          location="Michigan, USA"
           startDate="Aug 2022"
           endDate="May 2024"
           bullets={["GPA: 4.0/4.0","Activities: US Airforce Cyber-Patriots Competition, job shadowing","Skills Learned: Various programming languages, game/project development, teamwork & collaboration, programming design logic"]}
@@ -64,7 +64,7 @@ export default function About() {
             startDate="Sept 2018"
             endDate="Present"
             companyName="Grace Church"
-            location="Jackson, MI"
+            location="Michigan, USA"
             last={true}
             bullets={["Engineered audio routing solutions involving teams of more than twenty members to put on safe, wellbalanced, and great sounding worship performances for 250-500+ attendees.",
               "Designed and created a small yet effective audio setup for youth and young adult gatherings, more than doubling audience participation during worship events."]}

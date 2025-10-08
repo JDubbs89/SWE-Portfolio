@@ -646,6 +646,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     @apply flex flex-col w-full h-full mt-5 justify-between;
 }
 
+.project-timeline-container {
+    @apply flex flex-col w-full h-full mt-5 justify-between;
+}
+
 .position-timeline-container {
     @apply flex flex-row my-0 py-0 h-full w-fit;
 }
@@ -751,7 +755,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .project-buttons-container {
-    @apply w-[60vw] flex mx-auto justify-between;
+    @apply w-[58vw] flex mx-auto justify-between;
 }
 
 .project-back-button {
@@ -759,7 +763,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .project-view-button {
-    @apply w-fit text-[2vh] mr-0 ml-auto;
+    @apply w-fit text-[1rem] mr-0 ml-auto;
 }
 
 .project-image {
@@ -775,7 +779,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .summary-section-para {
-    @apply text-[2.25vh] max-w-full mx-auto px-4;
+    @apply text-[1rem] max-w-[75vw] mx-auto px-4;
 }
 
 @media (max-width: 1120px) {
@@ -793,7 +797,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     }
 
     .summary-section-para {
-        @apply max-w-full mx-1;
+        @apply max-w-[90vw] mx-1;
     }
     .project-link-container {
         @apply top-[18%];
@@ -871,6 +875,30 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
   
 }
+
+/* New Project Page Styles */
+
+.entry-container{
+    @apply flex flex-col h-fit max-w-[55vw] mx-auto gap-2;
+}
+
+.entry-text{
+    @apply text-[1rem] w-full mx-5 font-light;
+}
+
+@media (max-width: 1120px) {
+
+    .entry-container{
+        @apply max-w-[85vw];
+    }
+
+    .entry-text{
+        @apply mx-2;
+    }
+
+}
+
+
 
 /* reverse for left to select */
 @keyframes mediaSwitch {

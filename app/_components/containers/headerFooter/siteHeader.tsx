@@ -49,7 +49,7 @@ export default function SiteHeader(){
     }, [collapsed, isMobile]);
 
     const name = "Jonathan Warner";
-    const jobTitle = "Software Developer";
+    const jobTitle = "Michigan, USA";
 
     return (
             <header className="nav-bar">
