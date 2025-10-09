@@ -14,8 +14,8 @@ export default function HobbyBadge(
 ){
   return (
     <SlideUpElement transformYM={{scroll:[0,1], value:[0,0]}} scaleM={{scroll:[0.9,1], value:[1,0.5]}} opacityM={{scroll:[0.9,1], value:[1,0.5]}} className="hobby-card">
-      <Image src={`/assets/icons/${src}`} alt={alt} width={imgSize} height={imgSize} className="m-auto w-[2.5rem] h-[2.5rem]"/>
-      <div className="mx-2 my-auto whitespace-nowrap">{name}</div>
+      <Image src={`/assets/icons/${src}`} alt={alt} width={imgSize} height={imgSize} className="my-auto mr-1 ml-auto w-[2.5rem] h-[2.5rem]"/>
+      <div className="my-auto mr-auto ml-1">{name}</div>
     </SlideUpElement>
   )
 }

@@ -18,9 +18,9 @@ type SlideUpElementProps = {
 export default function SlideUpElement({ 
   children, 
   className = "",
-  opacityM = { scroll:[0, 0.5, 0.8, 1],value:[1, 1, 0.75, 0] },
-  transformYM = { scroll:[0, 0.5, 0.8, 1],value:[0, 0, 25, 100] },
-  scaleM = { scroll:[0.7, 0.9],value:[1, 0.85] },
+  opacityM = { scroll:[0, 0.7, 0.8, 1],value:[1, 1, 0.75, 0] },
+  transformYM = { scroll:[0.8, 1],value:[0, 100] },
+  scaleM = { scroll:[0.8, 0.9],value:[1, 0.85] },
 }: SlideUpElementProps) {
   const ref = useRef<HTMLDivElement>(null)
   

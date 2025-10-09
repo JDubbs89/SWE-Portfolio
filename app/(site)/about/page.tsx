@@ -2,7 +2,8 @@ import SlideUpElement from "@components/containers/default/slideUpElement";
 import ContactFormSection from "@components/sections/contactFormSection";
 import BaseSection from "@components/sections/baseSection";
 import SummarySection from "@components/sections/summarySection";
-import MediaCarousel from "@components/containers/carousel/mediaCarousel/mediaCarousel";
+// import MediaCarousel from "@components/containers/carousel/imageCarousel";
+import CertContainer from "@components/containers/default/certContainer";
 import EduContainer from "@components/containers/default/eduContainer";
 import PositionContainer from "@/app/_components/containers/default/positionContainer";
 import HobbyBadge from "@components/containers/default/hobbyBadge";
@@ -45,7 +46,7 @@ export default function About() {
       </SummarySection>
 
       <SummarySection title="Hobbies" className="content-wrapper-px w-full mb-10">
-        <div className="flex flex-wrap gap-4 justify-center mt-5">
+        <div className="grid-2 gap-2 mt-5">
           <HobbyBadge name="Live Audio" src="mixing.svg"/>
           <HobbyBadge name="Video Games" src="gaming.svg"/>
           <HobbyBadge name="Exercise" src="running.svg"/>
@@ -74,8 +75,13 @@ export default function About() {
 
       
 
-      <SummarySection title="My Certifications" className="timeline-container content-wrapper-px flex justify-center mb-10">
-        <MediaCarousel mediaItems={[{src:"/assets/images/HTMLCSSCert.png"},{src:"/assets/images/JSCert.png"},{src:"/assets/images/PyCert.png"}]} ></MediaCarousel>
+      <SummarySection title="My Certifications" className="timeline-container content-wrapper-px justify-center mb-10 w-fit" childClass="">
+        <div className="flex flex-wrap max-w-full">
+          <CertContainer title="CIT: HTML & CSS" src="/assets/images/HTMLCSSCert.png" org="Certiport - A Pearson Vue Business" date="June 1, 2023"/>
+          <CertContainer title="CIT: JavaScript" src="/assets/images/JSCert.png" org="Certiport - A Pearson Vue Business" date="June 1, 2023"/>
+          <CertContainer title="CIT: Python" src="/assets/images/PyCert.png" org="Certiport - A Pearson Vue Business" date="April 11, 2024"/>
+        </div>
+        {/* <MediaCarousel images={["/assets/images/HTMLCSSCert.png","/assets/images/JSCert.png","/assets/images/PyCert.png"]} ></MediaCarousel> */}
       </SummarySection>
 
       <ContactFormSection/>
