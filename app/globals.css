@@ -755,15 +755,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .project-buttons-container {
-    @apply w-[58vw] flex mx-auto justify-between;
+    @apply w-[min(58vw,68rem)] flex mx-auto justify-between;
 }
 
 .project-back-button {
-    @apply w-fit text-[2vh] ml-0 mr-auto;
+    @apply w-fit text-[1rem] ml-0;
 }
 
 .project-view-button {
-    @apply w-fit text-[1rem] mr-0 ml-auto;
+    @apply w-fit text-[1rem] mr-0;
 }
 
 .project-image {

@@ -20,11 +20,11 @@ export default function PositionContainer(
         <SlideUpElement transformYM={{scroll:[0],value:[1]}} opacityM={{scroll:[1], value:[1]}} scaleM={{scroll:[0],value:[1]}}>
         <div className="position-timeline-container">
             <SlideUpElement transformYM={{scroll:[1],value:[0]}} scaleM={{scroll:[1],value:[1]}} className="flex flex-col gap-0 w-5"> {/* Timeline Spans/Dates */}
-                <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{startDate}</div>
+                <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{endDate}</div>
                 <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-400"></span>
                 <span className="rounded-full h-5 w-2 ml-3.25 bg-white"></span>
                 <span className="relative h-full w-0.5 mx-4 my-0 py-0 bg-blue-400"></span>
-                {(last ? <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{endDate}</div> : null)}
+                {(last ? <div className="text-[clamp(0.70rem,0.8rem,0.8rem)] font-medium text-gray-400 ml-2 my-2 whitespace-nowrap">{startDate}</div> : null)}
             </SlideUpElement>
             
             <SlideUpElement transformYM={{scroll:[0.9,1],value:[0,100]}} scaleM={{scroll:[.9,1],value:[1,0.7]}} className={`position-card ${last ? "mb-10" : ""}`}>
