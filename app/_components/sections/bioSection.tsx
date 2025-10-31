@@ -10,7 +10,7 @@ export default function BioSection (){
             Hello World!
           </div>
           <div className="bio-caption">
-            I{"'"}m Jonathan, a computer science student and aspiring software developer.
+            I{"'"}m Jonathan, a computer science student and fullstack software developer.
           </div>
           <span className="hero-spacer"></span>
         </div>
