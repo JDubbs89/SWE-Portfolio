@@ -202,7 +202,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hero-image {
-    @apply rounded-2xl border-2 w-[clamp(20vw,30vw,30vw)] h-[clamp(25vw,35vw,35vw)] mt-8 border-blue-400 object-cover object-bottom-right;
+    @apply rounded-2xl border-2 w-[clamp(20vw,30vw,30vw)] h-[35vw] mt-8 border-blue-400 object-cover object-bottom-right;
 }
 
 .social-button-text {
@@ -232,7 +232,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         @apply my-5;
     }
     .hero-image {
-        @apply opacity-100 m-0 w-full h-[40vh] object-top;
+        @apply opacity-100 m-0 min-w-full h-[45vh] object-top;
     }
 }
 
