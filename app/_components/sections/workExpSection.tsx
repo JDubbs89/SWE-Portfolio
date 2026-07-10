@@ -19,34 +19,36 @@ export default function WrkExpSection(){
                 </SlideUpElement>
                 <div className="timeline-container"> {/* col container for containers */}
                     <PositionContainer 
+                        positionTitle="Information Technology Intern, Ignition Developer Intern"
+                        startDate="Jun 2026"
+                        endDate="Aug 2026"
+                        companyName="Dexter Axle"
+                        location="On-Site, Albion, Indiana, USA"
+                        bullets={["Architected a plant-wide asset map application in Ignition Designer to assist in the location, tracking, and organization of 300+ multi-department assets across 7 buildings on site.",
+                            "Scaffolded a normalized database in Microsoft SQL Server, writing stored procedures and application interactions to streamline data interactions with the asset map application.",
+                            "Worked with networking engineers and external contractors to handle the registration and deployment of 30+ new wireless access points (WAPs), boosting security and efficiency compliance by 40%.",
+                            "Assisted office staff with technology-related issues, handling hundreds of tickets across all buildings and departments on campus."]}
+                    />
+                    <PositionContainer 
+                        positionTitle="Web Developer"
+                        startDate="Jan 2026"
+                        endDate="Jun 2026"
+                        companyName="Grace Church"
+                        location="Hybrid, Michigan, USA"
+                        bullets={["Designed, built, and shipped a responsive website built with WordPress, Advanced Custom Fields, Bricks Builder, and code components comprised of HTML, JavaScript, CSS, and PHP.",
+                            "Managed 301 redirects and SEO optimization for clean transition from the previous website, programmatically migrated site content, and cleanly transitioned site domain from the old DNS provider to Cloudflare DNS.",
+                            "Worked with external service providers including Subsplash to dynamically host, synchronize, and distribute content across web and mobile applications via API/embedded content.",
+                            "Optimized site performance using CDN caching, image compression optimization, and JavaScript load minimization."]}
+                    />
+                    <PositionContainer 
                         positionTitle="Information Technology Intern"
-                    startDate="May 2025"
-                    endDate="Aug 2025"
-                    companyName="Martinrea Industries"
-                    location="Michigan, USA"
-                    bullets={["Spearheaded domain migration of 120+ machine operator kiosks while developing and maintaining detailed documentation, massively reducing network overhead by uniting systems under one corporate policy.",
-                        "Created a robust and easy-to-use PA system for meetings, increasing audibility for listeners farthest from the speaker by more than 30% and resulting in improved team cohesion and communication.", 
+                        startDate="May 2025"
+                        endDate="Aug 2025"
+                        companyName="Martinrea Industries"
+                        location="On-Site, Michigan, USA"
+                        bullets={["Collaborated with IT analysts on domain migration of 120+ machine operator kiosks while developing and maintaining detailed documentation, reducing network overhead by uniting systems under one corporate policy.",
+                            "Created a robust and easy-to-use PA system for meetings, increasing audibility for listeners farthest from the speaker by more than 30% and resulting in improved team cohesion and communication.",
                             "Monitored and resolved various operator issues and system malfunctions, reducing machine downtime and increasing productivity through quick response times and troubleshooting endeavors."]}
-                    />
-                    <PositionContainer 
-                        positionTitle="Crew Leader"
-                    startDate="Aug 2024"
-                    endDate="May 2025"
-                    companyName="Johnny's Markets"
-                    location="Indiana, USA"
-                    bullets={["Interviewed and trained five employees while collaborating with a team of 14, increasing morale and reducing work related stress on team members by more than 25% by improving workload distribution.",
-                        "Managed routine store operations in place of management, allowing for an increase in productivity and a 15% reduction in labor costs due to reduced managerial work hours.", 
-                            "Collaborated with team members to perform quarterly deep cleaning runs of the worksite, resulting in multiple 98%+ scores on white-glove inspections."]}
-                    />
-                    <PositionContainer 
-                        positionTitle="CIT Student"
-                    startDate="Aug 2022"
-                    endDate="May 2024"
-                    companyName="JACC"
-                    location="Michigan, USA"
-                    bullets={["Crafted unique and entertaining projects in a small team of peers, using Python to structure game logic, graphics, and sound to create fully functional games including a 2D-platformer, snake game, and more.",
-                        "Architected personal web projects using HTML, CSS, and JavaScript to create interactive and visually appealing sites, including a timer webapp, treasure hunt game, madlibs generator, and more.", 
-                        "Developed a singleplayer, third-person game using Unreal Engine 4/5, implementing complex enemy AI, player movement and ability systems, and static level design to create a fun and satisfying horde-style melee fighting gameplay experience."]}
                         last={true}
                     />
                 </div>
